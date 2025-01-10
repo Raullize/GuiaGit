@@ -11,6 +11,14 @@ Git é um sistema de controle de versão distribuído que permite gerenciar e ac
 - **Segurança**: Armazena as alterações de forma segura e rastreável.
 - **Controle de Versão**: Mantém diferentes versões do projeto, permitindo reversões rápidas a versões anteriores.
 
+## 🔍 Conceitos Fundamentais do Git
+
+- **Repositório** 📁: O projeto como um todo. O diretório raiz de onde serão monitoradas todas as alterações.
+- **Commit** 💾: O ato de salvar uma ou mais alterações no código. Também pode se referir ao conjunto dessas alterações.
+- **Working Tree** 🌳: O espaço de trabalho onde você faz modificações nos arquivos do projeto. Alterações locais são realizadas aqui antes de serem adicionadas à área de preparação.
+- **Staging Area** 🧩: Uma área de preparação onde você seleciona as alterações que serão salvas no próximo commit.
+- **Branches** 🌿: Ramificações que permitem trabalhar em paralelo no projeto sem afetar a ramificação principal.
+
 ## 🔧 Como usar o Git?
 
 1. **Instalação**
@@ -41,6 +49,35 @@ Git é um sistema de controle de versão distribuído que permite gerenciar e ac
     ```bash
     git clone <url-do-repositorio>
     ```
+
+## 📂 Comandos Essenciais do Terminal
+
+- `pwd` 📜: Exibe o caminho completo do diretório atual.
+- `ls` 📋: Lista o conteúdo do diretório atual.
+- `mkdir` 🗂️: Cria um novo diretório vazio.
+- `cd` 🔄: Navega entre diretórios.
+- `ni` / `touch` 📝: Cria um arquivo vazio.
+- `cp` 📄: Copia arquivos ou diretórios.
+- `mv` 🚚: Move ou renomeia arquivos/diretórios.
+- `rm` 🗑️: Remove arquivos ou diretórios.
+- `code .` 💻: Abre o Visual Studio Code no diretório atual.
+- `clear` ✨: Limpa a tela do terminal.
+- `exit` ❌: Fecha o terminal ou finaliza uma sessão.
+
+## ⚙️ Comandos Essenciais do Git
+
+- `git init` 🛠️: Inicializa um repositório no diretório atual.
+- `git status` 🔎: Exibe a situação atual da working tree (o que foi modificado e o que está preparado).
+- `git add .` ➕: Adiciona arquivos modificados à área de preparação (staging area).
+- `git rm --cached` 🗑️: Remove arquivos da área de preparação (desfaz o comando `add`).
+- `git commit -m "mensagem do commit"` 💬: Salva definitivamente as alterações preparadas no histórico do repositório.
+- `git log` 📜: Mostra o histórico de commits.
+- `git diff` ⚡: Exibe as alterações entre diferentes commits ou entre a working tree e o repositório.
+- `git restore` 🧹: Reverte as alterações em um arquivo, retornando ao estado do último commit.
+- `git merge` 🔗: Combina mudanças de uma branch com a branch atual.
+- `git pull` ⬇️: Atualiza a branch local com as alterações do repositório remoto.
+- `git push` ⬆️: Envia as alterações da branch local para o repositório remoto.
+
 ## 📜 Padrões de Commits
 
 De acordo com a [documentação do Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), commits semânticos são uma convenção simples para ser utilizada nas mensagens de commit. Essa convenção define um conjunto de regras para criar um histórico de commit explícito, facilitando a criação de ferramentas automatizadas e compreensão das alterações.
@@ -76,12 +113,23 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 
 - `remove` - Commits do tipo remove indicam a exclusão de arquivos, diretórios ou funcionalidades obsoletas ou não utilizadas, reduzindo o tamanho e a complexidade do projeto e mantendo-o mais organizado.
 
-## Recomendações 🎉
+## 🛠️ Boas Práticas e Dicas
 
-- Adicione um tipo consistente com o título do conteúdo.
-- Recomendamos que na primeira linha deve ter no máximo 4 palavras.
-- Para descrever com detalhes, usar a descrição do commit.
-- Usar um emoji no início da mensagem de commit representando sobre o commit.
+### 📝 Nomeie Seus Commits com Cuidado
+- Use mensagens claras e objetivas para descrever o que foi alterado e por quê.
+- Alinhe-se aos padrões do time.
+
+### 🔍 Revise Antes de Comitar
+- Verifique mudanças com `git diff` para evitar commits incompletos ou incorretos.
+- Use `git status` para confirmar o que será incluído no commit.
+
+### 🔄 Faça Commits Pequenos e Frequentes
+- Cada commit deve conter uma pequena funcionalidade ou correção.
+- Isso facilita revisões, testes e reverte alterações problemáticas.
+
+### 🎨 Use Emojis nos Commits
+- Adicione um emoji no início da mensagem para representar visualmente o tipo de alteração (ex.: ✨, 🐛, 📚).
+- Exemplo: `git commit -m ":sparkles: feat: Adiciona funcionalidade de login"`
 
 ## Padrões de emojis 💈
 
@@ -277,134 +325,114 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
   </tbody>
 </table>
 
-## 💻 Exemplos
+# 🖥️ Guia Avançado de Branches e Colaboração no Git
 
-<table>
-  <thead>
-    <tr>
-      <th>Comando Git</th>
-      <th>Resultado no GitHub</th>
-    </tr>
-  </thead>
- <tbody>
-    <tr>
-      <td>
-        <code>git commit -m ":tada: Commit inicial"</code>
-      </td>
-      <td>🎉 Commit inicial</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":books: docs: Atualização do README"</code>
-      </td>
-      <td>📚 docs: Atualização do README</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":bug: fix: Loop infinito na linha 50"</code>
-      </td>
-      <td>🐛 fix: Loop infinito na linha 50</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":sparkles: feat: Página de login"</code>
-      </td>
-      <td>✨ feat: Página de login</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":bricks: ci: Modificação no Dockerfile"</code>
-      </td>
-      <td>🧱 ci: Modificação no Dockerfile</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":recycle: refactor: Passando para arrow functions"</code>
-      </td>
-      <td>♻️ refactor: Passando para arrow functions</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":zap: perf: Melhoria no tempo de resposta"</code>
-      </td>
-      <td>⚡ perf: Melhoria no tempo de resposta</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":boom: fix: Revertendo mudanças ineficientes"</code>
-      </td>
-      <td>💥 fix: Revertendo mudanças ineficientes</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":lipstick: feat: Estilização CSS do formulário"</code>
-      </td>
-      <td>💄 feat: Estilização CSS do formulário</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":test_tube: test: Criando novo teste"</code>
-      </td>
-      <td>🧪 test: Criando novo teste</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":bulb: docs: Comentários sobre a função LoremIpsum( )"</code>
-      </td>
-      <td>💡 docs: Comentários sobre a função LoremIpsum( )</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":card_file_box: raw: RAW Data do ano aaaa"</code>
-      </td>
-      <td>🗃️ raw: RAW Data do ano aaaa</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":broom: cleanup: Eliminando blocos de código comentados e variáveis não utilizadas na função de validação de formulário"</code>
-      </td>
-      <td>🧹 cleanup: Eliminando blocos de código comentados e variáveis não utilizadas na função de validação de formulário</td>
-    </tr>
-    <tr>
-      <td>
-        <code>git commit -m ":wastebasket: remove: Removendo arquivos não utilizados do projeto para manter a organização e atualização contínua"</code>
-      </td>
-      <td>🗑️ remove: Removendo arquivos não utilizados do projeto para manter a organização e atualização contínua</td>
-    </tr>
-  </tbody>
-</table>
+## 🌿 O que são Branches?
 
-# Principais comandos do Git 📜
+Branches são ramificações que permitem trabalhar em diferentes linhas de desenvolvimento dentro de um mesmo repositório.
 
-- `git clone url-do-repositorio-no-github` - Clona um repositório remoto existente no GitHub para o seu ambiente local.
+### 🚀 Por que usar branches?
 
-- `git init` - Inicializa um novo repositório Git no diretório atual.
+- **Isolamento de Trabalho**: Permite trabalhar em novas funcionalidades ou correções sem interferir na branch principal.
+- **Histórico Organizado**: Mantém o histórico de desenvolvimento claro e bem estruturado.
+- **Colaboração Facilitada**: Desenvolvedores podem trabalhar em suas próprias branches e integrar (merge) as mudanças quando finalizadas.
 
-- `git add .` - Adiciona todos os arquivos e alterações no diretório atual para a área de stage (preparando-os para o commit).
+### 📂 Conceitos Fundamentais sobre Branches
 
-- `git commit -m "mensagem do commit"` - Registra as alterações adicionadas na área de stage com uma mensagem descritiva sobre o que foi modificado.
+- **Branch Principal**: Geralmente chamada de `main` ou `master`, é a linha principal de desenvolvimento onde o código mais estável é mantido.
+- **Branch de Funcionalidade**: Usada para desenvolver uma nova funcionalidade ou melhoria. Criada a partir da branch principal e, ao final, suas mudanças são integradas de volta.
+- **Branch de Correção**: Focada em resolver problemas ou bugs específicos. Funciona de maneira semelhante à branch de funcionalidade.
 
-- `git branch -M main` - Renomeia a branch atual (master) para main. O -M é usado para forçar a renomeação, movendo a branch se necessário.
+## ⚙️ Trabalhando com Branches
 
-- `git remote add origin https://github.com/usuario/nome-do-repositorio.git` - Adiciona um repositório remoto chamado origin ao repositório local. Use `https://github.com/usuario` para configurar o repositório remoto com HTTPS ou `git@github.com:usuario` para configurar com SSH.
+1. **Criar uma nova branch**:
+   ```bash
+   git branch nome-da-branch
 
-- `git push -u origin main` - Envia os commits da branch main do repositório local para o repositório remoto origin e define main como a branch padrão para futuros push e pull. O -u (ou --set-upstream) configura a branch upstream para facilitar os próximos comandos git push e git pull e eliminar a necessidade de especificar a branch.
+2. **Mudar para uma branch existente**:
+   ```bash
+   git checkout nome-da-branch
+- Dica: Use `git checkout -b nome-da-branch` para criar e mudar para uma nova branch em um único comando.
 
-- `git remote add origin git@github.com:usuario/projeto.git` `git branch -M main` `git push -u origin main` - Quando você já tem um repositório local e quer conectá-lo a um repositório remoto no GitHub, adiciona o repositório remoto, renomeia a branch principal para main e envia os commits iniciais.
+3. **Listar todas as branches no repositório**:
+   ```bash
+   git branch
 
-- `git fetch` - Busca todas as atualizações do repositório remoto sem integrá-las à branch atual. Isso atualiza as referências remotas.
+4. **Integrar mudanças de uma branch para outra**:
+   ```bash
+   git merge nome-da-branch
 
-- `git pull origin main` - Atualiza a branch local main com as mudanças do repositório remoto origin. Combina git fetch e git merge.
+### ❌ Quando Deletar Branches?
 
-- `git push --force-with-lease` - Forma mais segura de forçar o envio de alterações locais para o repositório remoto. Verifica se não houve alterações feitas por outros colaboradores desde sua última atualização local, evitando sobrescrever acidentalmente o trabalho de outros.
+Após concluir o trabalho em uma branch e integrá-la à principal, você deve deletá-la para manter o repositório organizado.
 
-- `git revert id_do_commit_que_vai_ser_revertido` - Cria um novo commit que desfaz as alterações feitas pelo commit especificado, preservando o histórico. Útil para desfazer mudanças de forma segura sem reescrever o histórico.
+- **Deletar branch local**:
+  ```bash
+  git branch -d nome-da-branch
 
-- `git reset --hard id_do_commit_anterior_ao_que_vai_ser_apagado` - Redefine o repositório para o estado do commit especificado, apagando todas as mudanças feitas após esse commit. Ideal para uso local. Para sincronizar remotamente, use `git push --force-with-lease` posteriormente.
+- **Forçar a deleção de uma branch local**:
+  ```bash
+  git branch -D nome-da-branch
 
-- `git commit --amend -m "mensagem_reescrita"` - Altera a mensagem do último commit. Após usar este comando, sincronize remotamente com `git push --force-with-lease`.
+- **Deletar branch remota**:
+  ```bash
+  git push origin --delete nome-da-branch
 
-- `git cherry-pick HASH_DO_COMMIT` - Utilizado para obter um commit específico. Exemplo de uso: Imagine que você tenha duas branchs (main) e (develop) e na segunda você tem 3 commits mas deseja apenas pegar o primeiro commit dela, com o uso de cherry-pick você pode.
+### ✏️ Renomear Branch
+
+- **Renomear branch atual**:
+  ```bash
+  git branch -m novo-nome
+
+- **Renomear branch específica**:
+  ```bash
+  git branch -m nome-antigo novo-nome
+
+## 🔀 O que são Conflitos de Merge?
+
+Conflitos de merge ocorrem quando o Git não consegue combinar automaticamente mudanças feitas em duas branches diferentes.
+
+### ⚠️ Tipos de Conflitos
+
+- **Alterações Conflitantes**: Mudanças incompatíveis feitas na mesma linha de um arquivo.
+- **Exclusões Conflitantes**: Um desenvolvedor exclui uma linha ou arquivo que outro modificou.
+
+### 🛠️ Como Resolver Conflitos de Merge?
+
+1. **Identificar os arquivos em conflito**:
+   - Use `git status` para listar os arquivos marcados como "both modified".
+
+2. **Abrir os arquivos conflitantes**:
+   - Arquivos em conflito terão marcações especiais, como `<<<<<<<`, `=======`, e `>>>>>>>`.
+
+3. **Resolver os conflitos**:
+   - Edite os arquivos para combinar as mudanças de forma adequada e remova as marcações de conflito.
+
+4. **Marcar os conflitos como resolvidos**:
+   ```bash
+   git add nome-do-arquivo
+
+5. **Finalizar o merge**:
+   ```bash
+   git commit
+
+## 🌐 Fluxo de Trabalho Colaborativo
+
+1. **Clonar o repositório** e configurar o ambiente inicial.
+2. Criar uma **nova branch** para trabalhar em uma tarefa específica:
+   ```bash
+   git checkout -b nome-da-branch
+
+3. Fazer alterações no projeto na nova branch.
+4. Adicionar (`git add`) e commitar (`git commit`) as mudanças.
+5. Subir a branch para o repositório remoto e abrir um **Pull Request** (PR).
+6. O líder do projeto aprova o PR e integra as alterações na branch principal (`git merge`).
+7. Deletar branches antigas e continuar o ciclo de desenvolvimento.
+
+## 📜 Arquivos Especiais no Git
+
+- **`.gitignore`** 🚫: Define arquivos e pastas que o Git deve ignorar, como arquivos temporários ou de configuração local.
+- **`.gitkeep`** 📂: Um arquivo vazio usado para manter diretórios sem conteúdo no repositório (o Git não rastreia diretórios vazios por padrão).
 
 # Glossário 📖
 
