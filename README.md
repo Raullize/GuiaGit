@@ -1,4 +1,4 @@
-# Git: Conceitos e Comandos
+# GuiaGit: Conceitos e Comandos
 
 ## 💻 Introdução ao Git
 
