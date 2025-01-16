@@ -325,8 +325,6 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
   </tbody>
 </table>
 
-# 🖥️ Guia Avançado de Branches e Colaboração no Git
-
 ## 🌿 O que são Branches?
 
 Branches são ramificações que permitem trabalhar em diferentes linhas de desenvolvimento dentro de um mesmo repositório.
@@ -449,3 +447,9 @@ Conflitos de merge ocorrem quando o Git não consegue combinar automaticamente m
 - [Documentação Oficial do Git](https://git-scm.com/doc)
 - [Pro Git Book](https://git-scm.com/book/en/v2) - Livro gratuito sobre Git
 - [Guia Interativo do Git](https://rogerdudler.github.io/git-guide/index.pt_BR.html) - Prática de comandos Git com visualização interativa
+
+---
+
+Esperamos que este guia tenha sido útil para você! 😄 Continuaremos expandindo com mais dicas e exemplos.
+
+🎯 **Contribuições são bem-vindas!** Caso queira adicionar algo, faça um pull request no repositório.
