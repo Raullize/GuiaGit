@@ -1,4 +1,4 @@
-# GuiaGit: Conceitos e Comandos
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=180&section=header&text=GuiaGit:+Conceitos+ao+Git&fontSize=30&fontColor=fff&animation=twinkling&fontAlignY=35"/>
 
 ## 💻 Introdução ao Git
 
@@ -453,3 +453,5 @@ Conflitos de merge ocorrem quando o Git não consegue combinar automaticamente m
 Esperamos que este guia tenha sido útil para você! 😄 Continuaremos expandindo com mais dicas e exemplos.
 
 🎯 **Contribuições são bem-vindas!** Caso queira adicionar algo, faça um pull request no repositório.
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>
