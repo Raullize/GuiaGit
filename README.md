@@ -1,5 +1,9 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=180&section=header&text=GuiaGit:+Conceitos+ao+Git&fontSize=30&fontColor=fff&animation=twinkling&fontAlignY=35"/>
 
+# ⚙️ GuiaGit
+
+Bem-vindo ao GuiaGit, um recurso completo para aprender Git e dominar o controle de versão. Este guia abrange desde os conceitos básicos até os tópicos mais avançados, sendo ideal tanto para iniciantes quanto para desenvolvedores intermediários que desejam aprimorar suas habilidades com o Git, garantindo um fluxo de trabalho mais eficiente e organizado no desenvolvimento de projetos.
+
 ## 💻 Introdução ao Git
 
 Git é um sistema de controle de versão distribuído que permite gerenciar e acompanhar alterações em projetos de software de maneira eficiente e colaborativa. Criado por Linus Torvalds em 2005, o Git é amplamente utilizado no desenvolvimento de software para facilitar a colaboração entre desenvolvedores e manter um histórico completo das alterações feitas no código.
