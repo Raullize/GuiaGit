@@ -457,7 +457,7 @@ Esse método é útil para automação de releases e organização do código. �
 6. O líder do projeto aprova o PR e integra as alterações na branch principal (`git merge`).
 7. Deletar branches antigas e continuar o ciclo de desenvolvimento.
 
-# Glossário 📖
+## 📖 Glossário 
 
 - `fork` - Cópia de um repositório para a sua própria conta no GitHub. Isso cria um novo repositório em sua conta que é independente do original, permitindo que você faça alterações sem afetar o repositório original.
 
