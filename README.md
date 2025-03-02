@@ -11,13 +11,14 @@ Bem-vindo ao GuiaGit, um recurso completo para aprender Git e dominar o controle
 5. [📂 Comandos Essenciais do Terminal](contents/comandos-terminal.md)
 6. [⚙️ Comandos Essenciais do Git](contents/comandos-git.md)
 7. [📜 Padrões de Commits](contents/padroes-commits.md)
-8. [🛠️ Boas Práticas e Dicas + Emojis](contents/boas-praticas.md)
-9. [🌿 O que são Branches?](contents/branches.md)
-10. [🔀 O que são Conflitos de Merge?](contents/conflitos-merge.md)
-11. [📌 Versionamento Semântico](contents/versionamento-semantico.md)
-12. [🌐 Fluxo de Trabalho Colaborativo](contents/fluxo-colaborativo.md)
-13. [📖 Glossário](contents/glossario.md)
-14. [📜 Arquivos Especiais no Git](contents/arquivos-especiais.md)
+8. [🛠️ Boas Práticas e Dicas](contents/boas-praticas.md)
+9. [🎨 Commits com Emojis](contents/emojis.md)
+10. [🌿 O que são Branches?](contents/branches.md)
+11. [🔀 O que são Conflitos de Merge?](contents/conflitos-merge.md)
+12. [📌 Versionamento Semântico](contents/versionamento-semantico.md)
+13. [🌐 Fluxo de Trabalho Colaborativo](contents/fluxo-colaborativo.md)
+14. [📖 Glossário](contents/glossario.md)
+15. [📜 Arquivos Especiais no Git](contents/arquivos-especiais.md)
 
 <h2 id="introducao-ao-git"> 💻 Introdução ao Git</h2>
 
