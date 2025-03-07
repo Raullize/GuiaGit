@@ -12,7 +12,7 @@ Bem-vindo ao GuiaGit, um recurso completo para aprender Git e dominar o controle
 6. [⚙️ Comandos Essenciais do Git](contents/comandos-git.md)
 7. [📜 O que são Commits?](contents/o-que-sao-commits.md)
 8. [🎯 Commits Semânticos](contents/commits-semanticos.md)
-9. [🧑‍💻 Mantendo um padrão de Commits](contents/mantendo-um-padrão-de-commits.md)
+9. [🧑‍💻 Mantendo um Padrão de Commits](contents/mantendo-um-padrão-de-commits.md)
 10. [🎨 Commits com Emojis](contents/emojis.md)
 11. [🛠️ Boas Práticas e Dicas](contents/boas-praticas.md)
 12. [🌿 O que são Branches?](contents/branches.md)
