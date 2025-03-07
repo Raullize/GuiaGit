@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 📜 Padrões de Commits
+# 🎯 Commits Semânticos
 
 De acordo com a [documentação do Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), commits semânticos são uma convenção simples para ser utilizada nas mensagens de commit. Essa convenção define um conjunto de regras para criar um histórico de commit explícito, facilitando a criação de ferramentas automatizadas e compreensão das alterações.
 
