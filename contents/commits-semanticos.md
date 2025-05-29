@@ -2,38 +2,239 @@
 
 # 🎯 Commits Semânticos
 
-De acordo com a [documentação do Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), commits semânticos são uma convenção simples para ser utilizada nas mensagens de commit. Essa convenção define um conjunto de regras para criar um histórico de commit explícito, facilitando a criação de ferramentas automatizadas e compreensão das alterações.
+## 📋 Estrutura
 
-Esses commits ajudam você e sua equipe a entenderem de forma facilitada quais alterações foram realizadas no código. Essa identificação ocorre por meio de uma palavra que identifica se aquele commit realizado se trata de uma alteração de código, atualização de pacotes, documentação, alteração de visual, teste, entre outros.
+A estrutura de um commit semântico segue o padrão:
 
-## 📌 Tipo e Descrição
-O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
+```plaintext
+tipo(escopo opcional): descrição
 
-- `feat`- Commits do tipo feat indicam que seu trecho de código está incluindo um **novo recurso** (se relaciona com o MINOR do versionamento semântico).
+corpo opcional
 
-- `fix` - Commits do tipo fix indicam que seu trecho de código commitado está **solucionando um problema** (bug fix), (se relaciona com o PATCH do versionamento semântico).
+rodapé opcional
+```
 
-- `docs` - Commits do tipo docs indicam que houveram **mudanças na documentação**, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).
+## 🏷️ Tipos de Commit
 
-- `test` - Commits do tipo test são utilizados quando são realizadas **alterações em testes**, seja criando, alterando ou excluindo testes unitários. (Não inclui alterações em código)
+### 1. feat ✨
+**Novas funcionalidades**
+```plaintext
+feat(auth): adiciona login com Google
+feat(api): implementa endpoints de usuário
+feat(ui): adiciona componente de carousel
+```
 
-- `build` - Commits do tipo build são utilizados quando são realizadas modificações em **arquivos de build e dependências**.
+### 2. fix 🐛
+**Correções de bugs**
+```plaintext
+fix(auth): corrige validação de token expirado
+fix(api): resolve memory leak em consultas
+fix(ui): ajusta posicionamento do modal
+```
 
-- `perf` - Commits do tipo perf servem para identificar quaisquer alterações de código que estejam relacionadas a **performance**.
+### 3. docs 📚
+**Documentação**
+```plaintext
+docs(readme): atualiza instruções de instalação
+docs(api): adiciona exemplos de uso
+docs(contributing): adiciona guia de estilo
+```
 
-- `style` - Commits do tipo style indicam que houveram alterações referentes a **formatações de código**, semicolons, trailing spaces, lint... (Não inclui alterações em código).
+### 4. style 💄
+**Formatação de código**
+```plaintext
+style(lint): ajusta indentação
+style(format): remove espaços em branco
+style(prettier): aplica regras de formatação
+```
 
-- `refactor` - Commits do tipo refactor referem-se a mudanças devido a **refatorações que não alterem sua funcionalidade**, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade, ou melhorias de performance devido a um code review.
+### 5. refactor ♻️
+**Refatoração de código**
+```plaintext
+refactor(auth): simplifica lógica de validação
+refactor(api): migra para async/await
+refactor(models): reorganiza estrutura de dados
+```
 
-- `chore` - Commits do tipo chore indicam **atualizações de tarefas** de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
+### 6. test ✅
+**Testes**
+```plaintext
+test(auth): adiciona testes de integração
+test(api): melhora cobertura de testes
+test(utils): corrige mock de dados
+```
 
-- `ci` - Commits do tipo ci indicam mudanças relacionadas a **integração contínua** (_continuous integration_).
+### 7. chore 🔧
+**Manutenção**
+```plaintext
+chore(deps): atualiza dependências
+chore(build): configura pipeline CI
+chore(release): prepara v1.0.0
+```
 
-- `raw` - Commits do tipo raw indicam mudanças relacionadas a arquivos de configurações, dados, features, parâmetros.
+### 8. perf ⚡
+**Performance**
+```plaintext
+perf(api): otimiza consultas ao banco
+perf(queries): adiciona índices
+perf(cache): implementa estratégia de cache
+```
 
-- `cleanup` - Commits do tipo cleanup são utilizados para remover código comentado, trechos desnecessários ou qualquer outra forma de limpeza do código-fonte, visando aprimorar sua legibilidade e manutenibilidade.
+## 🌟 Exemplos Completos
 
-- `remove` - Commits do tipo remove indicam a exclusão de arquivos, diretórios ou funcionalidades obsoletas ou não utilizadas, reduzindo o tamanho e a complexidade do projeto e mantendo-o mais organizado.
+### Feature com Breaking Change
+```plaintext
+feat(api)!: altera estrutura de autenticação
+
+BREAKING CHANGE: A estrutura do token JWT foi alterada.
+Agora inclui permissões no payload.
+
+Closes #123
+```
+
+### Correção com Escopo
+```plaintext
+fix(dashboard): corrige cálculo de métricas
+
+- Ajusta fórmula de cálculo de ROI
+- Atualiza cache após recálculo
+- Adiciona validação de input
+
+Resolves #456
+```
+
+### Refatoração com Contexto
+```plaintext
+refactor(auth): migra para novo sistema de permissões
+
+- Separa lógica em middlewares
+- Implementa verificação granular
+- Adiciona testes de integração
+
+Part of #789
+```
+
+## 🔄 Fluxo de Trabalho
+
+### 1. Preparando o Commit
+```powershell
+# Verificar alterações
+git status
+
+# Adicionar arquivos
+git add .
+
+# Visualizar alterações
+git diff --staged
+```
+
+### 2. Criando o Commit
+```powershell
+# Commit simples
+git commit -m "feat: adiciona sistema de notificações"
+
+# Commit com corpo
+git commit -m "feat(auth): implementa 2FA
+
+- Adiciona geração de códigos TOTP
+- Integra com autenticador Google
+- Implementa recovery codes"
+```
+
+### 3. Ajustando o Último Commit
+```powershell
+# Editar mensagem
+git commit --amend -m "feat(auth): implementa autenticação 2FA"
+
+# Adicionar mudanças esquecidas
+git add .
+git commit --amend --no-edit
+```
+
+## 🤖 Automação
+
+### Commitlint
+```json
+// .commitlintrc.json
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "type-enum": [2, "always", [
+      "feat", "fix", "docs", "style", "refactor",
+      "test", "chore", "perf", "ci", "build", "temp"
+    ]]
+  }
+}
+```
+
+### Husky
+```json
+// .husky/commit-msg
+#!/bin/sh
+npx --no -- commitlint --edit $1
+```
+
+### Commitizen
+```powershell
+# Instalar
+npm install -g commitizen
+
+# Configurar
+commitizen init cz-conventional-changelog
+
+# Usar
+git cz
+```
+
+## 📊 Análise de Commits
+
+### Conventional Changelog
+```powershell
+# Gerar changelog
+conventional-changelog -p angular -i CHANGELOG.md -s
+```
+
+### Semantic Release
+```json
+// package.json
+{
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
+  }
+}
+```
+
+## 🎯 Dicas Práticas
+
+### 1. Mantenha Commits Atômicos
+✅ Um commit = Uma alteração lógica
+❌ Evite commits com múltiplas alterações não relacionadas
+
+### 2. Seja Descritivo
+✅ "feat(auth): implementa recuperação de senha"
+❌ "atualiza código"
+
+### 3. Use o Corpo do Commit
+✅ Explique o "por quê" das mudanças
+✅ Liste alterações principais
+✅ Referencie issues relacionadas
+
+### 4. Evite Commits Temporários
+❌ "wip"
+❌ "teste"
+❌ "fix bug"
+
+### 5. Mantenha Consistência
+✅ Siga o padrão do projeto
+✅ Use ferramentas de lint
+✅ Revise commits antes do push
 
 ---
 

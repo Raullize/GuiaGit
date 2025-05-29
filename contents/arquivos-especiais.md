@@ -2,62 +2,337 @@
 
 # 📜 Arquivos Especiais no Git
 
-## Arquivos de Configuração
+## 🔒 Arquivos de Configuração
 
-- **`.gitignore`** 🚫: Define arquivos e pastas que o Git deve ignorar. Ideal para arquivos temporários, logs, arquivos de ambiente e dependências que não devem ser rastreadas.
+### .gitignore 🚫
+Controla quais arquivos o Git deve ignorar.
 
-   ```bash
-   # Exemplo de .gitignore
-   node_modules/      # Ignora a pasta node_modules
-   *.log              # Ignora todos os arquivos de log
-   .env               # Ignora arquivo de variáveis de ambiente
-   build/             # Ignora diretório de build
-   ```
+#### Estrutura Básica
+```plaintext
+# Comentários começam com #
+*.log        # Ignora todos arquivos .log
+build/       # Ignora pasta build
+/dist        # Ignora dist apenas na raiz
+node_modules # Ignora node_modules em qualquer lugar
+!important.log # Não ignora important.log
+```
 
-- **`.gitattributes`** 🧩: Define atributos para caminhos específicos. Útil para configurar como o Git trata diferentes tipos de arquivo.
+#### Padrões Comuns
+```plaintext
+# Dependências
+node_modules/
+vendor/
+*.jar
 
-   ```bash
-   # Exemplo de .gitattributes
-   *.txt text         # Trata arquivos .txt como texto
-   *.jpg binary       # Trata arquivos .jpg como binários
-   *.sh text eol=lf   # Garante que scripts shell usem LF (Linux)
-   ```
+# Ambiente
+.env
+.env.local
+*.env*
+!.env.example
 
-- **`.gitkeep`** 📂: Um arquivo vazio (sem convenção oficial) usado para manter diretórios vazios no repositório, já que o Git não rastreia diretórios vazios.
+# Build
+/dist
+/build
+/out
 
-- **`.gitconfig`** ⚙️: Arquivo de configuração global do Git (não específico do repositório). Configura seu nome, email, aliases e outras preferências.
+# IDE
+.vscode/
+.idea/
+*.sublime-*
 
-## Arquivos Especiais de Projeto
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
 
-- **`.github/`** 👥: Diretório com arquivos especiais para configuração do GitHub:
-  - **`ISSUE_TEMPLATE/`**: Modelos para novos issues
-  - **`PULL_REQUEST_TEMPLATE.md`**: Modelo para Pull Requests
-  - **`workflows/`**: Arquivos de configuração para GitHub Actions
+# Sistema
+.DS_Store
+Thumbs.db
+```
 
-- **`.git/`** 🗄️: Diretório oculto criado pelo Git que contém todo o banco de dados local e configurações do repositório. **Nunca edite manualmente!**
+### .gitattributes 🔧
+Define atributos para caminhos.
 
-## Arquivos de Documentação
+#### Configurações Comuns
+```plaintext
+# Auto detecção de texto
+* text=auto
 
-- **`README.md`** 📖: Primeira documentação que as pessoas veem ao acessar seu repositório. Deve explicar o projeto, como instalar e utilizar.
+# Forçar LF para scripts
+*.sh text eol=lf
+*.bash text eol=lf
+*.py text eol=lf
 
-- **`CONTRIBUTING.md`** 🤝: Instruções para contribuidores do projeto, explicando como participar e enviar contribuições.
+# Forçar CRLF para scripts Windows
+*.bat text eol=crlf
+*.cmd text eol=crlf
 
-- **`CHANGELOG.md`** 📝: Documento que registra todas as mudanças significativas feitas no projeto a cada versão.
+# Arquivos binários
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.zip binary
 
-- **`LICENSE`** ⚖️: Arquivo que define como outras pessoas podem usar, modificar e distribuir seu código.
+# Linguagens específicas
+*.cs diff=csharp
+*.html diff=html
+*.java diff=java
+*.md diff=markdown
+```
 
-## Hooks do Git
+### .gitconfig ⚙️
+Configuração global do Git.
 
-- **`.git/hooks/`** 🪝: Diretório com scripts que o Git executa automaticamente em eventos específicos:
-  - **`pre-commit`**: Executa antes de um commit ser criado
-  - **`post-commit`**: Executa depois que um commit é criado
-  - **`pre-push`**: Executa antes de enviar commits para o repositório remoto
+#### Configurações Úteis
+```ini
+[user]
+    name = Seu Nome
+    email = seu.email@exemplo.com
+    signingkey = sua-chave-gpg
 
-## Dicas de Uso
+[core]
+    editor = code --wait
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab
 
-- Para criar um `.gitignore` eficiente, use geradores como [gitignore.io](https://www.toptal.com/developers/gitignore)
-- Para hooks personalizados, considere usar ferramentas como Husky para Node.js
-- Padronize seus arquivos `.gitignore` e `.gitattributes` entre projetos similares para manter consistência
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)'
+
+[commit]
+    template = ~/.gitmessage
+    gpgsign = true
+
+[pull]
+    rebase = true
+
+[merge]
+    tool = vscode
+```
+
+## 📋 Documentação
+
+### README.md 📖
+```markdown
+# Nome do Projeto
+
+## Descrição
+Breve descrição do projeto.
+
+## Instalação
+\`\`\`bash
+npm install
+\`\`\`
+
+## Uso
+\`\`\`javascript
+const exemplo = require('exemplo');
+exemplo.start();
+\`\`\`
+
+## Contribuição
+1. Fork o projeto
+2. Crie sua Feature Branch
+3. Commit suas mudanças
+4. Push para a Branch
+5. Abra um Pull Request
+
+## Licença
+MIT
+```
+
+### CONTRIBUTING.md 🤝
+```markdown
+# Guia de Contribuição
+
+## Processo
+1. Verifique issues existentes
+2. Discuta mudanças maiores
+3. Siga style guide
+4. Escreva testes
+5. Atualize documentação
+
+## Commits
+- Use commits semânticos
+- Mantenha commits atômicos
+- Referencie issues
+
+## Pull Requests
+- Use template
+- Inclua testes
+- Atualize docs
+```
+
+### CHANGELOG.md 📝
+```markdown
+# Changelog
+
+## [2.0.0] - 2025-05-29
+### Breaking Changes
+- Alteração na API principal
+
+### Added
+- Nova funcionalidade X
+- Suporte para Y
+
+### Fixed
+- Bug #123
+- Performance issue #456
+
+## [1.1.0] - 2025-05-28
+### Added
+- Feature Z
+```
+
+## 🔧 Arquivos de CI/CD
+
+### .github/workflows 🔄
+```yaml
+# ci.yml
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+      - run: npm ci
+      - run: npm test
+```
+
+### Issue Templates 📋
+```yaml
+# .github/ISSUE_TEMPLATE/bug_report.yml
+name: Bug Report
+description: Reporte um bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descreva o bug em detalhes
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+    validations:
+      required: true
+```
+
+### PR Template 📑
+```markdown
+# .github/pull_request_template.md
+
+## Descrição
+Descreva suas alterações
+
+## Tipo de mudança
+- [ ] Bug fix
+- [ ] Nova feature
+- [ ] Breaking change
+
+## Checklist
+- [ ] Testes atualizados
+- [ ] Documentação atualizada
+```
+
+## 🪝 Git Hooks
+
+### pre-commit
+```bash
+#!/bin/bash
+# .git/hooks/pre-commit
+
+# Executar linter
+npm run lint
+
+# Executar testes
+npm test
+
+# Verificar commits
+npx commitlint --edit
+```
+
+### pre-push
+```bash
+#!/bin/bash
+# .git/hooks/pre-push
+
+# Executar testes completos
+npm run test:full
+
+# Verificar build
+npm run build
+```
+
+### commit-msg
+```bash
+#!/bin/bash
+# .git/hooks/commit-msg
+
+# Validar mensagem de commit
+npx commitlint --edit $1
+```
+
+## 🔐 Segurança
+
+### .env.example
+```plaintext
+# Configurações do App
+APP_NAME=MeuApp
+APP_ENV=development
+APP_KEY=sua-chave-secreta
+
+# Database
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=user
+DB_PASS=password
+
+# APIs
+API_KEY=sua-api-key
+STRIPE_KEY=sua-stripe-key
+```
+
+### .npmrc
+```plaintext
+save-exact=true
+package-lock=false
+registry=https://registry.npmjs.org/
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+```
+
+## 🎨 Editor Config
+
+### .editorconfig
+```ini
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{java,py}]
+indent_size = 4
+```
 
 ---
 
