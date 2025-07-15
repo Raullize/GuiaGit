@@ -68,6 +68,13 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 
 ### 1. Novo Repositório
 
+#### Atalho Rápido - repo.new
+Uma forma super rápida de criar um novo repositório no GitHub é usar o atalho:
+```
+repo.new
+```
+Digite isso na barra de endereços do seu navegador e será redirecionado diretamente para a página de criação de um novo repositório no GitHub.
+
 #### Criar do Zero
 ```powershell
 # Inicializar repositório
