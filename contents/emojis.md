@@ -2,6 +2,8 @@
 
 # 🎨 Commits com Emojis
 
+> **🔗 Contexto:** Este é um complemento visual aos **[🎯 Commits Semânticos](commits-semanticos.md)**. Para implementação em equipe, veja **[🧑‍💻 Mantendo um Padrão](mantendo-um-padrão-de-commits.md)**.
+
 ## 📋 O que são Commits com Emojis?
 
 Commits com emojis são uma **abordagem visual alternativa** para representar o tipo de mudança em uma mensagem de commit. Em vez de usar apenas prefixos textuais como `feat:` ou `fix:`, você pode usar emojis para tornar o histórico mais visual e expressivo.

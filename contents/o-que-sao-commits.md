@@ -4,12 +4,21 @@
 
 ## 🎯 Conceito Base
 
-Um commit é como uma fotografia do seu código em um momento específico. Cada commit registra:
-- Quais arquivos foram alterados
-- O que foi modificado em cada arquivo
-- Quem fez as alterações
-- Quando as alterações foram feitas
-- Por que as alterações foram feitas (mensagem de commit)
+Um **commit** é como uma fotografia do seu código em um momento específico no tempo. É a unidade fundamental de versionamento no Git, representando um conjunto de alterações que foram aplicadas ao projeto.
+
+### 🔍 O que um Commit Registra:
+- **Quais arquivos** foram alterados, adicionados ou removidos
+- **O conteúdo exato** das modificações (diff)
+- **Quem** fez as alterações (autor e committer)
+- **Quando** as alterações foram feitas (timestamp)
+- **Por que** as alterações foram feitas (mensagem de commit)
+- **Referência** ao commit anterior (parent)
+
+### 🌟 Características Importantes:
+- **Imutável**: Uma vez criado, o conteúdo não pode ser alterado
+- **Único**: Cada commit tem um hash SHA-1 único
+- **Rastreável**: Forma uma cadeia histórica do projeto
+- **Atômico**: Representa uma unidade lógica de mudança
 
 ## 📝 Anatomia de um Commit
 
@@ -47,173 +56,116 @@ Closes #123
   }
 ```
 
-## 🔄 Ciclo de Vida
+## 🔄 Ciclo de Vida Básico
 
-### 1. Modificação
+### 1. 📝 Modificação (Working Directory)
 ```powershell
-# Criar/editar arquivos
+# Criar ou editar arquivos
 code src/auth.js
+echo "console.log('Hello');" > app.js
 ```
 
-### 2. Staging
+### 2. 📋 Preparação (Staging Area)
 ```powershell
 # Adicionar arquivo específico
 git add src/auth.js
 
-# Adicionar parte de um arquivo
+# Adicionar parte de um arquivo (interativo)
 git add -p src/auth.js
 
-# Adicionar todos os arquivos
+# Adicionar todos os arquivos modificados
 git add .
+
+# Verificar o que está preparado
+git status
 ```
 
-### 3. Commit
+### 3. 📸 Confirmação (Repository)
 ```powershell
 # Commit básico
-git commit -m "feat: adiciona autenticação"
+git commit -m "adiciona função de autenticação"
 
-# Commit com corpo
-git commit -m "feat: implementa login com Google
+# Commit com editor (para mensagens longas)
+git commit
 
-- Adiciona SDK do Google
-- Configura rotas OAuth
-- Implementa callback handler
-- Atualiza documentação"
+# Commit pulando o staging (cuidado!)
+git commit -am "atualiza todos os arquivos modificados"
 ```
 
-## 📋 Tipos de Commit
+## 🔍 Comandos de Investigação
 
-### 1. Feature Commit ✨
+### 📚 Visualizar Histórico
 ```powershell
-git commit -m "feat: adiciona sistema de notificações
+# Histórico completo
+git log
 
-- Implementa websockets
-- Adiciona queue de mensagens
-- Cria interface de notificação"
-```
-
-### 2. Bug Fix 🐛
-```powershell
-git commit -m "fix: corrige memory leak no WebSocket
-
-Issue: #234
-- Fecha conexões não utilizadas
-- Implementa timeout
-- Adiciona logs de debug"
-```
-
-### 3. Documentation 📚
-```powershell
-git commit -m "docs: atualiza API reference
-
-- Adiciona novos endpoints
-- Atualiza exemplos
-- Corrige typos"
-```
-
-### 4. Refactor ♻️
-```powershell
-git commit -m "refactor: simplifica lógica de autenticação
-
-- Extrai validações para middleware
-- Remove código duplicado
-- Melhora nomenclatura"
-```
-
-## 🛠️ Boas Práticas
-
-### 1. Commits Atômicos
-✅ **Bom**:
-```powershell
-git commit -m "feat: adiciona validação de email"
-git commit -m "style: ajusta layout do formulário"
-git commit -m "test: adiciona testes para validação"
-```
-
-❌ **Ruim**:
-```powershell
-git commit -m "implementa cadastro de usuário, arruma css e adiciona testes"
-```
-
-### 2. Mensagens Claras
-✅ **Bom**:
-```powershell
-git commit -m "fix: corrige cálculo de juros compostos
-
-- Ajusta fórmula matemática
-- Corrige arredondamento
-- Adiciona validação de input"
-```
-
-❌ **Ruim**:
-```powershell
-git commit -m "arruma bug"
-```
-
-### 3. Referências
-✅ **Bom**:
-```powershell
-git commit -m "fix: resolve problema de auth
-
-Closes #123
-Breaking change: nova estrutura de token
-See: #120, #121
-Co-authored-by: @colega"
-```
-
-## 🔍 Investigação
-
-### 1. Ver Histórico
-```powershell
-# Histórico detalhado
-git log --patch
-
-# Histórico resumido
+# Histórico resumido (uma linha por commit)
 git log --oneline
 
-# Histórico com graph
+# Histórico com gráfico de branches
 git log --graph --oneline --all
+
+# Últimos 5 commits
+git log -5
+
+# Histórico com diferenças
+git log -p
 ```
 
-### 2. Buscar Commits
+### 🔎 Buscar Commits
 ```powershell
 # Por autor
-git log --author="Nome"
+git log --author="João Silva"
 
-# Por mensagem
-git log --grep="feat"
+# Por mensagem (regex)
+git log --grep="fix"
 
-# Por conteúdo
+# Por conteúdo alterado
 git log -S "função específica"
+
+# Por arquivo
+git log -- src/auth.js
+
+# Entre datas
+git log --since="2024-01-01" --until="2024-12-31"
 ```
 
-### 3. Comparar Commits
+### 📊 Comparar Alterações
 ```powershell
-# Entre commits
+# Ver alterações não commitadas
+git diff
+
+# Ver alterações no staging
+git diff --staged
+
+# Entre commits específicos
 git diff abc123..def456
 
-# Com estado atual
+# Entre commit e estado atual
 git diff HEAD~3
 
 # Entre branches
-git diff main..feature
+git diff main..feature-branch
 ```
 
-## 🔄 Manipulação
+## 🛠️ Manipulação Básica
 
-### 1. Editar Último Commit
+### ✏️ Editar Último Commit
 ```powershell
-# Alterar mensagem
-git commit --amend -m "nova mensagem"
+# Alterar apenas a mensagem
+git commit --amend -m "nova mensagem corrigida"
 
-# Adicionar mudanças
-git add arquivo.js
+# Adicionar mudanças esquecidas
+git add arquivo-esquecido.js
 git commit --amend --no-edit
+
+# Alterar autor do último commit
+git commit --amend --author="Nome Correto <email@correto.com>"
 ```
 
-### 2. Reverter Commits
+### ↩️ Reverter Alterações
 ```powershell
-# Reverter commit específico
+# Reverter commit específico (cria novo commit)
 git revert abc123
 
 # Reverter último commit
@@ -221,34 +173,54 @@ git revert HEAD
 
 # Reverter merge commit
 git revert -m 1 merge-commit-hash
+
+# Reverter sem criar commit automaticamente
+git revert --no-commit abc123
 ```
 
-### 3. Reescrever Histórico
+### 🗂️ Informações do Commit
 ```powershell
-# Interativo últimos 3 commits
-git rebase -i HEAD~3
+# Detalhes de um commit específico
+git show abc123
 
-# Squash commits
-git reset --soft HEAD~3
-git commit -m "feat: implementa feature completa"
+# Apenas a mensagem
+git show --format="%s" abc123
+
+# Arquivos alterados
+git show --name-only abc123
+
+# Estatísticas das alterações
+git show --stat abc123
 ```
 
-## ⚠️ Cuidados
+## 🎯 Navegação Rápida
 
-### 1. Commits Públicos
-- Não reescreva histórico público
-- Use `revert` em vez de `reset`
-- Documente breaking changes
+### 📍 Referências Úteis
+```powershell
+# Último commit
+HEAD
 
-### 2. Segurança
-- Não commite credenciais
-- Use `.gitignore`
-- Assine commits importantes
+# Penúltimo commit
+HEAD~1 ou HEAD^
 
-### 3. Performance
-- Mantenha commits pequenos
-- Evite arquivos binários grandes
-- Use Git LFS quando necessário
+# Três commits atrás
+HEAD~3
+
+# Commit específico por hash
+abc123 (primeiros caracteres do hash)
+
+# Branch específica
+main, develop, feature-branch
+```
+
+## 🔗 Recursos e Próximos Passos
+
+### 📚 **Documentação Complementar**
+- **[🎯 Commits Semânticos](commits-semanticos.md)** - Especificação técnica detalhada para padronização
+- **[🧑‍💻 Mantendo um Padrão](mantendo-um-padrão-de-commits.md)** - Práticas de equipe e governança
+- **[🎨 Commits com Emojis](emojis.md)** - Alternativas visuais para identificação rápida
+
+### 🛠️ **Ferramentas Recomendadas**
 
 ---
 
