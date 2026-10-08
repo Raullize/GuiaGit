@@ -1,8 +1,8 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 📌 Versionamento Semântico (SemVer)
+# Versionamento Semântico (SemVer)
 
-## 🔢 Formato Básico
+## Formato Básico
 
 O versionamento semântico segue o formato `MAJOR.MINOR.PATCH` (`X.Y.Z`):
 
@@ -15,7 +15,7 @@ O versionamento semântico segue o formato `MAJOR.MINOR.PATCH` (`X.Y.Z`):
   2.0.0 → 3.0.0: Mudança na estrutura de autenticação
   ```
 
-### MINOR (Y) ✨
+### MINOR (Y)
 - Novas funcionalidades compatíveis
 - Adições sem quebrar compatibilidade
 - Exemplos:
@@ -24,7 +24,7 @@ O versionamento semântico segue o formato `MAJOR.MINOR.PATCH` (`X.Y.Z`):
   1.1.0 → 1.2.0: Nova feature de exportação
   ```
 
-### PATCH (Z) 🐛
+### PATCH (Z)
 - Correções de bugs
 - Patches de segurança
 - Exemplos:
@@ -33,22 +33,22 @@ O versionamento semântico segue o formato `MAJOR.MINOR.PATCH` (`X.Y.Z`):
   1.1.1 → 1.1.2: Atualização de dependência
   ```
 
-## 🏷️ Identificadores Especiais
+## Identificadores Especiais
 
-### Pre-release 🚧
+### Pre-release
 ```plaintext
 1.0.0-alpha.1
 1.0.0-beta.2
 1.0.0-rc.1
 ```
 
-### Build Metadata 🔨
+### Build Metadata
 ```plaintext
 1.0.0+20130313144700
 1.0.0-beta+exp.sha.5114f85
 ```
 
-## 📝 Exemplos Práticos
+## Exemplos Práticos
 
 ### 1. Commit Messages → Versão
 
@@ -83,7 +83,7 @@ MAJOR (X) increment
 2.0.0: Redesign completo
 ```
 
-## 🤖 Automação de Versões
+## Automação de Versões
 
 ### 1. Usando standard-version
 
@@ -136,7 +136,7 @@ jobs:
       - run: npx semantic-release
 ```
 
-## 📋 Changelog Automático
+## Changelog Automático
 
 ### 1. Conventional Changelog
 
@@ -173,7 +173,7 @@ conventional-changelog -p angular -i CHANGELOG.md -s
 - Melhoria na performance do cache
 ```
 
-## 🔄 Fluxo de Release
+## Fluxo de Release
 
 1. **Desenvolvimento**
    ```powershell
@@ -216,6 +216,6 @@ conventional-changelog -p angular -i CHANGELOG.md -s
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

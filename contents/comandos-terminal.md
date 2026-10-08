@@ -1,20 +1,20 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 📂 Comandos Essenciais do Terminal
+# Comandos Essenciais do Terminal
 
 O terminal é uma ferramenta fundamental para desenvolvedores, permitindo controle direto sobre o sistema operacional. Este guia apresenta os comandos essenciais organizados por sistema operacional, facilitando o trabalho em diferentes ambientes.
 
-## 🖥️ Identificando seu Sistema
+## Identificando seu Sistema
 
 Antes de começar, identifique qual terminal você está usando:
 
-- **🪟 Windows**: PowerShell, Command Prompt (cmd), ou Windows Terminal
-- **🐧 Linux**: Bash, Zsh, Fish (varia por distribuição)
-- **🍎 macOS**: Terminal (Bash/Zsh), iTerm2
+- **Windows**: PowerShell, Command Prompt (cmd), ou Windows Terminal
+- **Linux**: Bash, Zsh, Fish (varia por distribuição)
+- **macOS**: Terminal (Bash/Zsh), iTerm2
 
-## 📋 Tabela Comparativa de Comandos
+## Tabela Comparativa de Comandos
 
-### 🗂️ **Navegação e Listagem**
+### **Navegação e Listagem**
 
 | Função | Windows (PowerShell) | Windows (CMD) | Linux/Mac | Descrição |
 |--------|---------------------|---------------|-----------|-----------|
@@ -25,7 +25,7 @@ Antes de começar, identifique qual terminal você está usando:
 | **Voltar diretório** | `cd ..` | `cd ..` | `cd ..` | Volta um nível |
 | **Ir para home** | `cd ~` | `cd %USERPROFILE%` | `cd ~` | Vai para pasta do usuário |
 
-### 📁 **Manipulação de Diretórios**
+### **Manipulação de Diretórios**
 
 | Função | Windows (PowerShell) | Windows (CMD) | Linux/Mac | Descrição |
 |--------|---------------------|---------------|-----------|-----------|
@@ -34,7 +34,7 @@ Antes de começar, identifique qual terminal você está usando:
 | **Remover pasta com conteúdo** | `Remove-Item -Recurse` | `rmdir /s` | `rm -rf` | Remove diretório e conteúdo |
 | **Copiar pasta** | `Copy-Item -Recurse` | `xcopy /e` | `cp -r` | Copia diretório recursivamente |
 
-### 📄 **Manipulação de Arquivos**
+### **Manipulação de Arquivos**
 
 | Função | Windows (PowerShell) | Windows (CMD) | Linux/Mac | Descrição |
 |--------|---------------------|---------------|-----------|-----------|
@@ -45,7 +45,7 @@ Antes de começar, identifique qual terminal você está usando:
 | **Ver conteúdo** | `Get-Content` ou `cat` | `type` | `cat` | Exibe conteúdo do arquivo |
 | **Editar arquivo** | `notepad` ou `code` | `notepad` | `nano` ou `vim` | Abre editor |
 
-### 🔍 **Busca e Informações**
+### **Busca e Informações**
 
 | Função | Windows (PowerShell) | Windows (CMD) | Linux/Mac | Descrição |
 |--------|---------------------|---------------|-----------|-----------|
@@ -54,7 +54,7 @@ Antes de começar, identifique qual terminal você está usando:
 | **Tamanho do arquivo** | `Get-Item \| Select Length` | `dir` | `ls -lh` | Mostra tamanho |
 | **Espaço em disco** | `Get-PSDrive` | `dir` | `df -h` | Mostra espaço disponível |
 
-### 🛠️ **Utilitários do Sistema**
+### **Utilitários do Sistema**
 
 | Função | Windows (PowerShell) | Windows (CMD) | Linux/Mac | Descrição |
 |--------|---------------------|---------------|-----------|-----------|
@@ -64,9 +64,9 @@ Antes de começar, identifique qual terminal você está usando:
 | **Matar processo** | `Stop-Process` | `taskkill` | `kill` | Termina processo |
 | **Variáveis ambiente** | `Get-ChildItem Env:` | `set` | `env` | Lista variáveis |
 
-## 🚀 Exemplos Práticos por Sistema
+## Exemplos Práticos por Sistema
 
-### 🪟 **Windows (PowerShell)**
+### **Windows (PowerShell)**
 
 ```powershell
 # Navegação básica
@@ -93,7 +93,7 @@ git commit -m "feat: adiciona README"  # Commit
 git push origin main                   # Push para repositório
 ```
 
-### 🐧 **Linux**
+### **Linux**
 
 ```bash
 # Navegação básica
@@ -120,7 +120,7 @@ kill -9 1234                         # Mata processo por PID
 nohup npm start &                     # Executa em background
 ```
 
-### 🍎 **macOS**
+### **macOS**
 
 ```bash
 # Navegação básica (similar ao Linux)
@@ -147,9 +147,9 @@ brew list                             # Lista pacotes instalados
 brew update && brew upgrade           # Atualiza pacotes
 ```
 
-## 🎯 Comandos Específicos para Desenvolvimento
+## Comandos Específicos para Desenvolvimento
 
-### 📦 **Gerenciadores de Pacotes**
+### **Gerenciadores de Pacotes**
 
 #### Windows
 ```powershell
@@ -186,7 +186,7 @@ brew services start mongodb         # Inicia serviços
 brew cleanup                        # Limpa cache
 ```
 
-### 🔧 **Ferramentas de Desenvolvimento**
+### **Ferramentas de Desenvolvimento**
 
 ```bash
 # Node.js (todos os sistemas)
@@ -210,16 +210,16 @@ git config --global user.email "email"   # Configura email
 git clone https://github.com/user/repo   # Clona repositório
 ```
 
-## 💡 Dicas e Truques
+## Dicas e Truques
 
-### ⚡ **Atalhos Universais**
+### **Atalhos Universais**
 - **Tab**: Auto-completar comandos e nomes de arquivos
 - **Ctrl + C**: Interromper comando em execução
 - **Ctrl + L**: Limpar tela (alternativa ao `clear`)
 - **Ctrl + R**: Buscar no histórico de comandos
 - **↑/↓**: Navegar pelo histórico de comandos
 
-### 🔍 **Wildcards e Padrões**
+### **Wildcards e Padrões**
 ```bash
 # Todos os sistemas
 *.js                               # Todos os arquivos .js
@@ -228,7 +228,7 @@ file?.txt                          # file1.txt, file2.txt, etc.
 {js,ts,jsx}                       # Múltiplas extensões
 ```
 
-### 📝 **Redirecionamento**
+### **Redirecionamento**
 ```bash
 # Salvar saída em arquivo
 ls > lista-arquivos.txt           # Sobrescreve arquivo
@@ -237,7 +237,7 @@ command 2> erros.txt              # Redireciona erros
 command > output.txt 2>&1         # Redireciona tudo
 ```
 
-### 🔗 **Pipes e Combinações**
+### **Pipes e Combinações**
 ```bash
 # Linux/Mac
 ls -la | grep ".js"               # Lista apenas arquivos .js
@@ -249,7 +249,7 @@ Get-Process | Where-Object {$_.Name -like "*node*"}  # Filtra processos
 Get-ChildItem | Sort-Object Name | Select-Object -First 10  # Primeiros 10
 ```
 
-## 🚨 Comandos Perigosos - Use com Cuidado!
+## Comandos Perigosos - Use com Cuidado!
 
 ### ⚠️ **Comandos Destrutivos**
 ```bash
@@ -280,21 +280,21 @@ cp -r projeto/ projeto-backup/    # Linux/Mac
 Copy-Item -Recurse projeto/ projeto-backup/  # Windows
 ```
 
-## 🎓 Próximos Passos
+## Próximos Passos
 
-### 📚 **Aprofundamento**
+### **Aprofundamento**
 1. **Aprenda um editor de terminal**: `vim`, `nano`, ou `emacs`
 2. **Domine o Git**: Controle de versão essencial
 3. **Explore scripts**: Automatize tarefas repetitivas
 4. **Configure aliases**: Crie atalhos personalizados
 5. **Use multiplexadores**: `tmux` (Linux/Mac) ou Windows Terminal
 
-### 🔗 **Recursos Relacionados**
-- **[📜 Comandos Git](comandos-git.md)** - Comandos específicos do Git
-- **[🎯 Como Usar Git](como-usar-git.md)** - Guia prático do Git
-- **[🏗️ Fluxo Colaborativo](fluxo-colaborativo.md)** - Trabalho em equipe
+### **Recursos Relacionados**
+- **[Comandos Git](comandos-git.md)** - Comandos específicos do Git
+- **[Como Usar Git](como-usar-git.md)** - Guia prático do Git
+- **[Fluxo Colaborativo](fluxo-colaborativo.md)** - Trabalho em equipe
 
-### 🛠️ **Ferramentas Recomendadas**
+### **Ferramentas Recomendadas**
 - **Windows**: Windows Terminal, PowerShell 7, WSL2
 - **Linux**: Zsh + Oh My Zsh, Terminator, Fish Shell  
 - **macOS**: iTerm2, Oh My Zsh, Homebrew
@@ -302,6 +302,6 @@ Copy-Item -Recurse projeto/ projeto-backup/  # Windows
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

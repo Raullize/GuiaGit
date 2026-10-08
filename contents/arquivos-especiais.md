@@ -1,10 +1,10 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 📜 Arquivos Especiais no Git
+# Arquivos Especiais no Git
 
-## 🔒 Arquivos de Configuração
+## Arquivos de Configuração
 
-### .gitignore 🚫
+### .gitignore
 Controla quais arquivos o Git deve ignorar.
 
 #### Estrutura Básica
@@ -50,7 +50,7 @@ yarn-debug.log*
 Thumbs.db
 ```
 
-### .gitattributes 🔧
+### .gitattributes
 Define atributos para caminhos.
 
 #### Configurações Comuns
@@ -81,7 +81,7 @@ Define atributos para caminhos.
 *.md diff=markdown
 ```
 
-### .gitconfig ⚙️
+### .gitconfig
 Configuração global do Git.
 
 #### Configurações Úteis
@@ -114,9 +114,9 @@ Configuração global do Git.
     tool = vscode
 ```
 
-## 📋 Documentação
+## Documentação
 
-### README.md 📖
+### README.md
 ```markdown
 # Nome do Projeto
 
@@ -145,7 +145,7 @@ exemplo.start();
 MIT
 ```
 
-### CONTRIBUTING.md 🤝
+### CONTRIBUTING.md
 ```markdown
 # Guia de Contribuição
 
@@ -167,7 +167,7 @@ MIT
 - Atualize docs
 ```
 
-### CHANGELOG.md 📝
+### CHANGELOG.md
 ```markdown
 # Changelog
 
@@ -188,9 +188,9 @@ MIT
 - Feature Z
 ```
 
-## 🔧 Arquivos de CI/CD
+## Arquivos de CI/CD
 
-### .github/workflows 🔄
+### .github/workflows
 ```yaml
 # ci.yml
 name: CI
@@ -212,7 +212,7 @@ jobs:
       - run: npm test
 ```
 
-### Issue Templates 📋
+### Issue Templates
 ```yaml
 # .github/ISSUE_TEMPLATE/bug_report.yml
 name: Bug Report
@@ -230,7 +230,7 @@ body:
       required: true
 ```
 
-### PR Template 📑
+### PR Template
 ```markdown
 # .github/pull_request_template.md
 
@@ -247,7 +247,7 @@ Descreva suas alterações
 - [ ] Documentação atualizada
 ```
 
-## 🪝 Git Hooks
+## Git Hooks
 
 ### pre-commit
 ```bash
@@ -285,7 +285,7 @@ npm run build
 npx commitlint --edit $1
 ```
 
-## 🔐 Segurança
+## Segurança
 
 ### .env.example
 ```plaintext
@@ -313,7 +313,7 @@ registry=https://registry.npmjs.org/
 //registry.npmjs.org/:_authToken=${NPM_TOKEN}
 ```
 
-## 🎨 Editor Config
+## Editor Config
 
 ### .editorconfig
 ```ini
@@ -336,6 +336,6 @@ indent_size = 4
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

@@ -1,22 +1,22 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# ⚙️ Comandos Essenciais do Git
+# Comandos Essenciais do Git
 
 Saber usar o Git é uma habilidade fundamental para qualquer desenvolvedor, seja para trabalhar em equipe ou para gerenciar projetos pessoais. Abaixo estão os comandos essenciais do Git que todo desenvolvedor deve conhecer:
 
-- `git init` 🛠️: Inicializa um repositório no diretório atual.
-- `git status` 🔎: Exibe a situação atual da working tree (o que foi modificado e o que está preparado).
+- `git init` : Inicializa um repositório no diretório atual.
+- `git status` : Exibe a situação atual da working tree (o que foi modificado e o que está preparado).
 - `git add .` ➕: Adiciona arquivos modificados à área de preparação (staging area).
-- `git rm --cached` 🗑️: Remove arquivos da área de preparação (desfaz o comando `add`).
-- `git commit -m "mensagem do commit"` 💬: Salva definitivamente as alterações preparadas no histórico do repositório.
-- `git log` 📜: Mostra o histórico de commits.
-- `git diff` ⚡: Exibe as alterações entre diferentes commits ou entre a working tree e o repositório.
-- `git restore` 🧹: Reverte as alterações em um arquivo, retornando ao estado do último commit.
-- `git merge` 🔗: Combina mudanças de uma branch com a branch atual.
+- `git rm --cached` : Remove arquivos da área de preparação (desfaz o comando `add`).
+- `git commit -m "mensagem do commit"` : Salva definitivamente as alterações preparadas no histórico do repositório.
+- `git log` : Mostra o histórico de commits.
+- `git diff` : Exibe as alterações entre diferentes commits ou entre a working tree e o repositório.
+- `git restore` : Reverte as alterações em um arquivo, retornando ao estado do último commit.
+- `git merge` : Combina mudanças de uma branch com a branch atual.
 - `git pull` ⬇️: Atualiza a branch local com as alterações do repositório remoto.
 - `git push` ⬆️: Envia as alterações da branch local para o repositório remoto.
 
-## 🚀 Por que o Git é essencial para desenvolvedores?
+## Por que o Git é essencial para desenvolvedores?
 
 - Controle de versão: Permite rastrear todas as alterações no código, facilitando a identificação de bugs e a reversão para versões anteriores.
 
@@ -30,13 +30,13 @@ Saber usar o Git é uma habilidade fundamental para qualquer desenvolvedor, seja
 
 ---
 
-# ⚙️ Comandos Essenciais do Git
+# Comandos Essenciais do Git
 
-## 🔄 Comandos Diários
+## Comandos Diários
 
 ### Verificando Status e Histórico
 
-1. **git status** 🔍
+1. **git status**
 ```powershell
 # Ver status detalhado
 git status
@@ -45,7 +45,7 @@ git status
 git status -s
 ```
 
-2. **git log** 📜
+2. **git log**
 ```powershell
 # Ver histórico detalhado
 git log
@@ -74,7 +74,7 @@ git add .
 git add -p arquivo.txt
 ```
 
-2. **git commit** 💾
+2. **git commit**
 ```powershell
 # Commit básico
 git commit -m "feat: adiciona login com Google"
@@ -86,7 +86,7 @@ git commit -am "fix: corrige bug no formulário"
 git commit --amend -m "nova mensagem"
 ```
 
-3. **git restore** 🔄
+3. **git restore**
 ```powershell
 # Descartar mudanças em arquivo
 git restore arquivo.txt
@@ -98,11 +98,11 @@ git restore --staged arquivo.txt
 git restore --source=HEAD~1 arquivo.txt
 ```
 
-## 🌿 Trabalhando com Branches
+## Trabalhando com Branches
 
 ### Gerenciamento de Branches
 
-1. **Criar e Mudar** 🆕
+1. **Criar e Mudar**
 ```powershell
 # Criar branch
 git branch feature/login
@@ -114,7 +114,7 @@ git checkout -b feature/login
 git checkout main
 ```
 
-2. **Listar e Deletar** 📋
+2. **Listar e Deletar**
 ```powershell
 # Listar branches locais
 git branch
@@ -132,7 +132,7 @@ git branch -d feature/login
 git branch -D feature/login
 ```
 
-## 🔄 Sincronização com Remoto
+## Sincronização com Remoto
 
 ### Push e Pull
 
@@ -161,7 +161,7 @@ git fetch origin
 git merge origin/main
 ```
 
-## 🛠️ Comandos Avançados
+## Comandos Avançados
 
 ### Stash
 
@@ -223,7 +223,7 @@ git bisect good <hash-do-commit>
 git bisect reset
 ```
 
-## 🔍 Comandos de Inspeção
+## Comandos de Inspeção
 
 ### Diff
 
@@ -251,7 +251,7 @@ git blame arquivo.txt
 git blame -L 10,20 arquivo.txt
 ```
 
-## 💡 Dicas e Truques
+## Dicas e Truques
 
 1. **Aliases Úteis**
 ```powershell
@@ -302,6 +302,6 @@ git checkout -b recuperacao <hash-do-commit>
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

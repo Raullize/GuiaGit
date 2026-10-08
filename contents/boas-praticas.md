@@ -1,8 +1,8 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🛠️ Boas Práticas e Dicas
+# Boas Práticas e Dicas
 
-## 📝 Mensagens de Commit
+## Mensagens de Commit
 
 ### Estrutura Ideal
 ```plaintext
@@ -33,7 +33,7 @@
 - Use o corpo para explicações detalhadas
 - Referencie issues quando relevante
 
-## 🌿 Organização de Branches
+## Organização de Branches
 
 ### Nomenclatura
 ```plaintext
@@ -53,7 +53,7 @@ main
 └── release/v1.2.0
 ```
 
-## 🔍 Code Review
+## Code Review
 
 ### Checklist do Autor
 - [ ] Testes atualizados/adicionados
@@ -78,7 +78,7 @@ main
 ❌ "Por que fez assim?"
 ```
 
-## 📂 Organização do Repositório
+## Organização do Repositório
 
 ### Estrutura de Diretórios
 ```plaintext
@@ -98,7 +98,7 @@ main
 - `CONTRIBUTING.md`: Guia de contribuição
 - `.editorconfig`: Configurações do editor
 
-## 🔄 Fluxo de Trabalho
+## Fluxo de Trabalho
 
 ### Antes de Começar
 1. Atualize a branch principal
@@ -134,7 +134,7 @@ main
    git rebase -i main
    ```
 
-## 🛡️ Segurança
+## Segurança
 
 ### Proteção de Dados Sensíveis
 - Use `.gitignore` para arquivos sensíveis
@@ -160,7 +160,7 @@ npm-debug.log*
 /build
 ```
 
-## 🚀 Performance
+## Performance
 
 ### Otimização do Repositório
 ```powershell
@@ -179,7 +179,7 @@ git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objec
 - Considere ignorar arquivos de build
 - Mantenha o repositório leve
 
-## 📊 Monitoramento
+## Monitoramento
 
 ### Análise de Contribuições
 ```powershell
@@ -193,7 +193,7 @@ git log --author="nome" --oneline
 git log --since="1 month ago" --oneline
 ```
 
-## 🎯 Dicas Avançadas
+## Dicas Avançadas
 
 ### Aliases Úteis
 ```powershell
@@ -236,6 +236,6 @@ git reflog
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

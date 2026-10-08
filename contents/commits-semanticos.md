@@ -1,20 +1,20 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🎯 Commits Semânticos
+# Commits Semânticos
 
-> **💡 Novo nos commits?** Comece com **[📜 O que são Commits](o-que-sao-commits.md)** para entender os fundamentos básicos.
+> **Novo nos commits?** Comece com **[O que são Commits](o-que-sao-commits.md)** para entender os fundamentos básicos.
 
-## 🎯 O que são Commits Semânticos?
+## O que são Commits Semânticos?
 
 Os **Commits Semânticos** (Conventional Commits) são uma especificação para padronizar mensagens de commit, tornando-as legíveis tanto para humanos quanto para máquinas. Esta convenção facilita a automação de versionamento, geração de changelogs e integração com ferramentas de CI/CD.
 
-### 🎯 Benefícios:
+### Benefícios:
 - **Automação**: Geração automática de changelogs e versionamento semântico
 - **Clareza**: Mensagens estruturadas e consistentes
 - **Colaboração**: Padrão universal reconhecido pela comunidade
 - **Ferramentas**: Integração com ferramentas de análise e release
 
-## 📋 Estrutura Oficial
+## Estrutura Oficial
 
 A estrutura de um commit semântico segue o padrão definido pela especificação:
 
@@ -26,7 +26,7 @@ A estrutura de um commit semântico segue o padrão definido pela especificaçã
 [rodapé opcional]
 ```
 
-### 🔍 Componentes:
+### Componentes:
 
 1. **Tipo** (obrigatório): Categoria da mudança
 2. **Escopo** (opcional): Área do código afetada
@@ -34,11 +34,11 @@ A estrutura de um commit semântico segue o padrão definido pela especificaçã
 4. **Corpo** (opcional): Explicação detalhada
 5. **Rodapé** (opcional): Breaking changes, issues, co-autores
 
-## 🏷️ Tipos de Commit (Especificação)
+## Tipos de Commit (Especificação)
 
-### 📝 Tipos Principais (Obrigatórios)
+### Tipos Principais (Obrigatórios)
 
-#### 1. **feat** ✨ - Novas Funcionalidades
+#### 1. **feat** - Novas Funcionalidades
 Adiciona uma nova funcionalidade ao código.
 ```plaintext
 feat(auth): adiciona login com Google OAuth
@@ -46,7 +46,7 @@ feat(api): implementa endpoints de usuário
 feat: adiciona componente de carousel
 ```
 
-#### 2. **fix** 🐛 - Correções de Bugs
+#### 2. **fix** - Correções de Bugs
 Corrige um bug no código.
 ```plaintext
 fix(auth): corrige validação de token expirado
@@ -54,9 +54,9 @@ fix(api): resolve memory leak em consultas
 fix: ajusta posicionamento do modal
 ```
 
-### 🔧 Tipos Complementares (Recomendados)
+### Tipos Complementares (Recomendados)
 
-#### 3. **docs** 📚 - Documentação
+#### 3. **docs** - Documentação
 Alterações apenas na documentação.
 ```plaintext
 docs(readme): atualiza instruções de instalação
@@ -64,7 +64,7 @@ docs(api): adiciona exemplos de uso
 docs: corrige typos na documentação
 ```
 
-#### 4. **style** 💄 - Formatação
+#### 4. **style** - Formatação
 Mudanças que não afetam o significado do código (espaços, formatação, etc.).
 ```plaintext
 style: remove espaços em branco
@@ -72,7 +72,7 @@ style(lint): ajusta indentação
 style: aplica regras do prettier
 ```
 
-#### 5. **refactor** ♻️ - Refatoração
+#### 5. **refactor** - Refatoração
 Mudança de código que não corrige bug nem adiciona funcionalidade.
 ```plaintext
 refactor(auth): simplifica lógica de validação
@@ -88,7 +88,7 @@ test: melhora cobertura de testes
 test(utils): corrige mock de dados
 ```
 
-#### 7. **chore** 🔧 - Manutenção
+#### 7. **chore** - Manutenção
 Mudanças no processo de build ou ferramentas auxiliares.
 ```plaintext
 chore(deps): atualiza dependências
@@ -96,7 +96,7 @@ chore: configura pipeline CI
 chore(release): prepara v1.0.0
 ```
 
-#### 8. **perf** ⚡ - Performance
+#### 8. **perf** - Performance
 Mudança que melhora a performance.
 ```plaintext
 perf(api): otimiza consultas ao banco
@@ -104,28 +104,28 @@ perf: adiciona índices de busca
 perf(cache): implementa estratégia de cache
 ```
 
-### 🎯 Tipos Adicionais (Opcionais)
+### Tipos Adicionais (Opcionais)
 
-#### 9. **ci** 🤖 - Integração Contínua
+#### 9. **ci** - Integração Contínua
 ```plaintext
 ci: adiciona workflow do GitHub Actions
 ci(docker): atualiza configuração de build
 ```
 
-#### 10. **build** 🏗️ - Sistema de Build
+#### 10. **build** - Sistema de Build
 ```plaintext
 build: atualiza configuração do webpack
 build(npm): adiciona script de deploy
 ```
 
-#### 11. **revert** ⏪ - Reversão
+#### 11. **revert** - Reversão
 ```plaintext
 revert: reverte commit abc123
 ```
 
-## 🌟 Exemplos Completos da Especificação
+## Exemplos Completos da Especificação
 
-### 🚨 Breaking Change (Mudança Incompatível)
+### Breaking Change (Mudança Incompatível)
 ```plaintext
 feat(api)!: altera estrutura de autenticação
 
@@ -148,7 +148,7 @@ Depois:
 Closes #123
 ```
 
-### 🔧 Correção com Escopo e Contexto
+### Correção com Escopo e Contexto
 ```plaintext
 fix(dashboard): corrige cálculo de métricas financeiras
 
@@ -163,7 +163,7 @@ Resolves #456
 Tested-by: @qa-team
 ```
 
-### ♻️ Refatoração com Justificativa
+### Refatoração com Justificativa
 ```plaintext
 refactor(auth): migra para novo sistema de permissões
 
@@ -179,7 +179,7 @@ Part of #789
 Co-authored-by: @security-team
 ```
 
-### 📚 Documentação com Múltiplas Alterações
+### Documentação com Múltiplas Alterações
 ```plaintext
 docs(api): atualiza documentação da API v2
 
@@ -192,9 +192,9 @@ docs(api): atualiza documentação da API v2
 See: #101, #102, #103
 ```
 
-## 🔄 Comandos e Fluxo de Trabalho
+## Comandos e Fluxo de Trabalho
 
-### 📝 Criando Commits Semânticos
+### Criando Commits Semânticos
 ```powershell
 # Commit simples (tipo + descrição)
 git commit -m "feat: adiciona sistema de notificações"
@@ -216,7 +216,7 @@ git commit
 # - Adiciona testes de segurança
 ```
 
-### ✏️ Editando o Último Commit
+### Editando o Último Commit
 ```powershell
 # Corrigir tipo ou escopo
 git commit --amend -m "fix(auth): implementa autenticação 2FA"
@@ -229,9 +229,9 @@ git commit --amend --no-edit
 git commit --amend
 ```
 
-## 🤖 Automação e Ferramentas
+## Automação e Ferramentas
 
-### 📋 Commitlint (Validação)
+### Commitlint (Validação)
 ```json
 // .commitlintrc.json
 {
@@ -250,7 +250,7 @@ git commit --amend
 }
 ```
 
-### 🎯 Commitizen (Assistente Interativo)
+### Commitizen (Assistente Interativo)
 ```powershell
 # Instalar globalmente
 npm install -g commitizen cz-conventional-changelog
@@ -264,7 +264,7 @@ git cz
 npx cz
 ```
 
-### 🔄 Husky (Git Hooks)
+### Husky (Git Hooks)
 ```json
 // package.json
 {
@@ -282,7 +282,7 @@ npx cz
 npx --no -- commitlint --edit $1
 ```
 
-### 📊 Semantic Release (Automação de Versões)
+### Semantic Release (Automação de Versões)
 ```json
 // .releaserc.json
 {
@@ -297,7 +297,7 @@ npx --no -- commitlint --edit $1
 }
 ```
 
-### 📈 Conventional Changelog
+### Conventional Changelog
 ```powershell
 # Instalar
 npm install -g conventional-changelog-cli
@@ -309,22 +309,22 @@ conventional-changelog -p angular -i CHANGELOG.md -s
 conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 ```
 
-## 🔗 Próximos Passos
+## Próximos Passos
 
 Para implementar commits semânticos efetivamente:
 
-- **[🧑‍💻 Mantendo um Padrão](mantendo-um-padrão-de-commits.md)** - Aprenda a implementar e manter padrões em equipe
-- **[📜 O que são Commits](o-que-sao-commits.md)** - Revise os conceitos fundamentais
-- **[🎨 Commits com Emojis](emojis.md)** - Explore alternativas visuais complementares
+- **[Mantendo um Padrão](mantendo-um-padrão-de-commits.md)** - Aprenda a implementar e manter padrões em equipe
+- **[O que são Commits](o-que-sao-commits.md)** - Revise os conceitos fundamentais
+- **[Commits com Emojis](emojis.md)** - Explore alternativas visuais complementares
 
-### 📈 **Próximos Níveis**
-1. **[🧑‍💻 Implementar em equipe](mantendo-um-padrão-de-commits.md)** - Governança e práticas colaborativas
-2. **[🎨 Adicionar emojis](emojis.md)** - Alternativa visual para identificação rápida
+### **Próximos Níveis**
+1. **[Implementar em equipe](mantendo-um-padrão-de-commits.md)** - Governança e práticas colaborativas
+2. **[Adicionar emojis](emojis.md)** - Alternativa visual para identificação rápida
 3. **Configurar automação** - CI/CD e ferramentas de release
 4. **Estabelecer métricas** - Qualidade e produtividade da equipe
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

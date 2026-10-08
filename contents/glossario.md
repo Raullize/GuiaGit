@@ -1,10 +1,10 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 📖 Glossário Git
+# Glossário Git
 
-## 🌳 Conceitos Básicos
+## Conceitos Básicos
 
-### repository (repositório) 📁
+### repository (repositório)
 Local onde o Git armazena todo o histórico do projeto
 ```powershell
 # Criar novo repositório
@@ -14,7 +14,7 @@ git init
 git clone https://github.com/usuario/repo.git
 ```
 
-### branch (ramificação) 🌿
+### branch (ramificação)
 Linha independente de desenvolvimento
 ```powershell
 # Criar branch
@@ -24,14 +24,14 @@ git branch feature/login
 git checkout feature/login
 ```
 
-### commit (confirmação) 💾
+### commit (confirmação)
 Snapshot do estado do projeto em um momento específico
 ```powershell
 # Criar commit
 git commit -m "feat: adiciona login"
 ```
 
-### fork 🔱
+### fork
 Cópia pessoal de um repositório de terceiros
 ```powershell
 # Fork é feito via interface do GitHub/GitLab
@@ -39,7 +39,7 @@ Cópia pessoal de um repositório de terceiros
 git clone https://github.com/seu-usuario/repo-forkado.git
 ```
 
-### pull request (PR) 📥
+### pull request (PR)
 Solicitação para integrar mudanças de uma branch/fork em outra
 ```powershell
 # Preparar PR
@@ -47,7 +47,7 @@ git push origin feature/nova-funcionalidade
 # Criar PR via interface do GitHub/GitLab
 ```
 
-## 🔄 Operações
+## Operações
 
 ### fetch ⬇️
 Baixa objetos e referências de outro repositório
@@ -57,28 +57,28 @@ git fetch origin
 git fetch --all
 ```
 
-### merge 🔗
+### merge
 Combina duas ou mais histórias de desenvolvimento
 ```powershell
 # Merge de branch
 git merge feature/login
 ```
 
-### rebase 📋
+### rebase
 Reaplica commits em cima de outra base
 ```powershell
 # Rebase na main
 git rebase main
 ```
 
-### cherry-pick 🍒
+### cherry-pick
 Aplica mudanças de commits específicos
 ```powershell
 # Aplicar commit específico
 git cherry-pick abc123
 ```
 
-### stash 📦
+### stash
 Armazena temporariamente mudanças não commitadas
 ```powershell
 # Salvar mudanças
@@ -88,9 +88,9 @@ git stash save "trabalho em progresso"
 git stash pop
 ```
 
-## 📍 Referências
+## Referências
 
-### HEAD 🎯
+### HEAD
 Ponteiro para o commit atual
 ```powershell
 # Ver HEAD atual
@@ -100,7 +100,7 @@ git rev-parse HEAD
 git checkout commit-hash
 ```
 
-### origin/upstream 🔄
+### origin/upstream
 Referências para repositórios remotos
 ```powershell
 # Ver remotes
@@ -110,7 +110,7 @@ git remote -v
 git remote add upstream https://github.com/original/repo.git
 ```
 
-### tag 🏷️
+### tag
 Marco específico no histórico do projeto
 ```powershell
 # Criar tag
@@ -120,9 +120,9 @@ git tag v1.0.0
 git tag -a v1.0.0 -m "Versão 1.0.0"
 ```
 
-## 🛠️ Áreas de Trabalho
+## Áreas de Trabalho
 
-### working directory 📂
+### working directory
 Diretório de trabalho atual
 ```powershell
 # Ver status
@@ -132,7 +132,7 @@ git status
 git checkout -- arquivo.txt
 ```
 
-### staging area (index) 🔋
+### staging area (index)
 Área de preparação para commits
 ```powershell
 # Adicionar à staging
@@ -142,14 +142,14 @@ git add arquivo.txt
 git restore --staged arquivo.txt
 ```
 
-### local repository 💾
+### local repository
 Repositório na sua máquina
 ```powershell
 # Ver commits locais
 git log --oneline
 ```
 
-### remote repository 🌐
+### remote repository
 Repositório em servidor remoto
 ```powershell
 # Ver branches remotas
@@ -159,9 +159,9 @@ git branch -r
 git push origin main
 ```
 
-## 🔧 Ferramentas
+## Ferramentas
 
-### hook 🪝
+### hook
 Scripts executados em eventos específicos
 ```bash
 #!/bin/bash
@@ -169,7 +169,7 @@ Scripts executados em eventos específicos
 npm test
 ```
 
-### submodule 📦
+### submodule
 Repositório dentro de outro repositório
 ```powershell
 # Adicionar submódulo
@@ -179,7 +179,7 @@ git submodule add https://github.com/lib/repo.git libs/repo
 git submodule update --init --recursive
 ```
 
-### gitignore 🚫
+### gitignore
 Arquivo que lista o que Git deve ignorar
 ```plaintext
 # .gitignore
@@ -188,7 +188,7 @@ node_modules/
 *.log
 ```
 
-### git-lfs 📊
+### git-lfs
 Sistema para arquivos grandes
 ```powershell
 # Instalar LFS
@@ -198,9 +198,9 @@ git lfs install
 git lfs track "*.psd"
 ```
 
-## 🔍 Diagnóstico
+## Diagnóstico
 
-### reflog 📜
+### reflog
 Registro de todas as ações no repositório
 ```powershell
 # Ver histórico de ações
@@ -210,14 +210,14 @@ git reflog
 git reset --hard HEAD@{1}
 ```
 
-### blame 👀
+### blame
 Mostra quem alterou cada linha
 ```powershell
 # Ver histórico de arquivo
 git blame arquivo.txt
 ```
 
-### bisect 🔍
+### bisect
 Busca binária por commits problemáticos
 ```powershell
 # Iniciar bisect
@@ -235,7 +235,7 @@ Arquivo não rastreado pelo Git
 git status
 ```
 
-### modified ✏️
+### modified
 Arquivo modificado desde último commit
 ```powershell
 # Ver modificações
@@ -258,6 +258,6 @@ git show HEAD
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

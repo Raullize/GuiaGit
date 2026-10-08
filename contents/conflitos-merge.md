@@ -1,13 +1,13 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
 
-# 🔀 O que são Conflitos de Merge?
+# O que são Conflitos de Merge?
 
 Conflitos de merge ocorrem quando o Git não consegue resolver automaticamente diferenças entre branches. Isso geralmente acontece quando duas branches modificam a mesma parte de um arquivo ou quando um arquivo foi modificado em uma branch e deletado em outra.
 
 ## ⚠️ Tipos de Conflitos
 
-### 1. Conflitos de Conteúdo 📝
+### 1. Conflitos de Conteúdo
 Quando a mesma linha ou seção é modificada em branches diferentes:
 
 ```plaintext
@@ -18,7 +18,7 @@ console.log("Hello World!");
 >>>>>>> feature-branch
 ```
 
-### 2. Conflitos de Estrutura 🏗️
+### 2. Conflitos de Estrutura
 - Arquivo renomeado em uma branch e editado em outra
 - Arquivo deletado em uma branch e modificado em outra
 - Arquivo movido para outro diretório
@@ -32,7 +32,7 @@ error: The following untracked working tree files would be overwritten by merge:
 Please move or remove them before you merge.
 ```
 
-## 🛠️ Como Resolver Conflitos
+## Como Resolver Conflitos
 
 ### Método Manual
 
@@ -65,7 +65,7 @@ Please move or remove them before you merge.
    git commit -m "fix: resolve conflitos de merge"
    ```
 
-### Usando Ferramentas Visuais 🖥️
+### Usando Ferramentas Visuais
 
 1. **VS Code Git**:
    - Mostra botões "Accept Current Change" e "Accept Incoming Change"
@@ -76,7 +76,7 @@ Please move or remove them before you merge.
    git mergetool
    ```
 
-## 🚫 Prevenindo Conflitos
+## Prevenindo Conflitos
 
 ### 1. Comunicação Clara
 - Coordene com a equipe quem está trabalhando em quais arquivos
@@ -104,7 +104,7 @@ git checkout sua-branch
 git merge main
 ```
 
-## 🆘 Situações Comuns e Soluções
+## Situações Comuns e Soluções
 
 ### 1. Conflito em Arquivo Binário
 - Use `git checkout --ours arquivo.bin` para manter sua versão
@@ -126,6 +126,6 @@ git merge -X theirs branch-name  # Preferir mudanças deles
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

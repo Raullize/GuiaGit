@@ -1,8 +1,8 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🔧 Como usar o Git?
+# Como usar o Git?
 
-## 🚀 Instalação e Configuração
+## Instalação e Configuração
 
 ### 1. Instalação por Sistema Operacional
 
@@ -64,7 +64,7 @@ git config --global alias.st status
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-## 🏗️ Iniciando com Git
+## Iniciando com Git
 
 ### 1. Novo Repositório
 
@@ -143,7 +143,7 @@ npm-debug.log*
 *.jpg binary
 ```
 
-## 🔄 Fluxo de Trabalho Básico
+## Fluxo de Trabalho Básico
 
 ### 1. Verificando Status
 ```powershell
@@ -180,7 +180,7 @@ git commit -m "feat: implementa autenticação OAuth2
 - Adiciona testes de integração"
 ```
 
-## 🔧 Ferramentas Úteis
+## Ferramentas Úteis
 
 ### 1. GUI Clients
 - GitHub Desktop
@@ -207,7 +207,7 @@ git lfs track "*.psd"
 git lfs track "*.zip"
 ```
 
-## 🔒 Segurança
+## Segurança
 
 ### 1. SSH Keys
 ```powershell
@@ -231,7 +231,7 @@ git config --global user.signingkey [SEU-ID-GPG]
 git config --global commit.gpgsign true
 ```
 
-## 🔍 Diagnóstico
+## Diagnóstico
 
 ### 1. Verificação do Sistema
 ```powershell
@@ -259,7 +259,7 @@ git gc
 git prune
 ```
 
-## 📚 Recursos Adicionais
+## Recursos Adicionais
 
 ### 1. Documentação
 - [Git Documentation](https://git-scm.com/doc)
@@ -278,6 +278,6 @@ git prune
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

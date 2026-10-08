@@ -1,42 +1,42 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🔍 Conceitos Fundamentais do Git
+# Conceitos Fundamentais do Git
 
 ## Estrutura Básica
 
-### 📁 Objetos Git
+### Objetos Git
 Git armazena todas as informações em quatro tipos de objetos:
 
-- **Blob** 📄: Armazena o conteúdo de arquivos
-- **Tree** 🌳: Representa diretórios e seus conteúdos
-- **Commit** 💾: Representa um snapshot do projeto
-- **Tag** 🏷️: Aponta para um commit específico (geralmente usado para versões)
+- **Blob** : Armazena o conteúdo de arquivos
+- **Tree** : Representa diretórios e seus conteúdos
+- **Commit** : Representa um snapshot do projeto
+- **Tag** : Aponta para um commit específico (geralmente usado para versões)
 
-### 🔄 Estados dos Arquivos
+### Estados dos Arquivos
 Arquivos em um repositório Git passam por três estados principais:
 
-1. **Modified** ✏️: Arquivo foi alterado mas não commitado
-2. **Staged** 🎯: Arquivo marcado para ser incluído no próximo commit
+1. **Modified** : Arquivo foi alterado mas não commitado
+2. **Staged** : Arquivo marcado para ser incluído no próximo commit
 3. **Committed** ✅: Arquivo salvo com segurança no repositório
 
-## 🏗️ Áreas de Trabalho
+## Áreas de Trabalho
 
-### Working Tree (Working Directory) 🌳
+### Working Tree (Working Directory)
 - É onde você faz modificações nos arquivos
 - Representa os arquivos atuais no seu sistema
 - Exemplo: Quando você edita um arquivo no VS Code, está trabalhando aqui
 
-### Staging Area (Index) 🧩
+### Staging Area (Index)
 - Área intermediária onde você prepara as mudanças para um commit
 - Permite selecionar quais alterações serão incluídas
 - Comando: `git add` move arquivos para esta área
 
-### Repository (Git Directory) 📂
+### Repository (Git Directory)
 - Onde o Git armazena os metadados e objetos do projeto
 - Localizado na pasta `.git` do seu projeto
 - Contém todo o histórico e configurações
 
-## 🔄 Fluxo Básico de Trabalho
+## Fluxo Básico de Trabalho
 
 1. **Modificar** arquivos na Working Tree
    ```powershell
@@ -48,7 +48,7 @@ Arquivos em um repositório Git passam por três estados principais:
    ```powershell
    # Adiciona arquivos específicos
    git add arquivo.txt
-   
+  
    # Adiciona todos os arquivos modificados
    git add .
    ```
@@ -58,7 +58,7 @@ Arquivos em um repositório Git passam por três estados principais:
    git commit -m "feat: adiciona nova funcionalidade"
    ```
 
-## 🌐 Repositórios
+## Repositórios
 
 ### Local Repository
 - Repositório na sua máquina
@@ -70,7 +70,7 @@ Arquivos em um repositório Git passam por três estados principais:
 - Permite colaboração entre equipes
 - Serve como backup do projeto
 
-## 🔗 Referências Git
+## Referências Git
 
 ### HEAD
 - Ponteiro especial que indica o commit atual
@@ -89,6 +89,6 @@ Arquivos em um repositório Git passam por três estados principais:
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

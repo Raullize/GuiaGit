@@ -1,10 +1,10 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🌐 Fluxo de Trabalho Colaborativo
+# Fluxo de Trabalho Colaborativo
 
-## 📋 Workflows Populares
+## Workflows Populares
 
-### 1. GitHub Flow 🔄
+### 1. GitHub Flow
 Workflow simplificado ideal para entregas contínuas:
 
 1. Branch principal (`main`) sempre deployável
@@ -15,7 +15,7 @@ Workflow simplificado ideal para entregas contínuas:
 6. Deploy e teste
 7. Merge
 
-### 2. GitFlow 🌳
+### 2. GitFlow
 Workflow mais estruturado para releases planejadas:
 
 - `main`: Código em produção
@@ -24,14 +24,14 @@ Workflow mais estruturado para releases planejadas:
 - `release/*`: Preparação para release
 - `hotfix/*`: Correções urgentes
 
-### 3. Trunk-Based Development 🚀
+### 3. Trunk-Based Development
 Workflow focado em integração contínua:
 
 - Commits frequentes na branch principal
 - Branches curtas (1-2 dias)
 - Feature flags para funcionalidades incompletas
 
-## 🤝 Boas Práticas de Colaboração
+## Boas Práticas de Colaboração
 
 ### 1. Antes de Começar
 ```powershell
@@ -86,7 +86,7 @@ git checkout feature/branch
 git rebase main
 ```
 
-## 🔄 Ciclo de Vida do Pull Request
+## Ciclo de Vida do Pull Request
 
 1. **Criação**
    - Branch atualizada
@@ -103,7 +103,7 @@ git rebase main
    - Delete branch feature
    - Deploy (se aplicável)
 
-## 🛠️ Ferramentas Úteis
+## Ferramentas Úteis
 
 ### 1. GitHub CLI
 ```powershell
@@ -133,7 +133,7 @@ npm test
 npm run lint
 ```
 
-## 🎯 Dicas para Sucesso
+## Dicas para Sucesso
 
 1. **Comunicação Clara**
    - Use mensagens de commit descritivas
@@ -152,6 +152,6 @@ npm run lint
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

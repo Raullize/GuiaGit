@@ -1,22 +1,22 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🌿 O que são Branches?
+# O que são Branches?
 
 Branches são ramificações que permitem trabalhar em diferentes linhas de desenvolvimento dentro de um mesmo repositório.
 
-## 🚀 Por que usar branches?
+## Por que usar branches?
 
 - **Isolamento de Trabalho**: Permite trabalhar em novas funcionalidades ou correções sem interferir na branch principal.
 - **Histórico Organizado**: Mantém o histórico de desenvolvimento claro e bem estruturado.
 - **Colaboração Facilitada**: Desenvolvedores podem trabalhar em suas próprias branches e integrar (merge) as mudanças quando finalizadas.
 
-## 📂 Conceitos Fundamentais sobre Branches
+## Conceitos Fundamentais sobre Branches
 
 - **Branch Principal**: Geralmente chamada de `main` ou `master`, é a linha principal de desenvolvimento onde o código mais estável é mantido.
 - **Branch de Funcionalidade**: Usada para desenvolver uma nova funcionalidade ou melhoria. Criada a partir da branch principal e, ao final, suas mudanças são integradas de volta.
 - **Branch de Correção**: Focada em resolver problemas ou bugs específicos. Funciona de maneira semelhante à branch de funcionalidade.
 
-## ⚙️ Trabalhando com Branches
+## Trabalhando com Branches
 
 1. **Criar uma nova branch**:
    ```bash
@@ -51,7 +51,7 @@ Após concluir o trabalho em uma branch e integrá-la à principal, você deve d
   ```bash
   git push origin --delete nome-da-branch
 
-## ✏️ Renomear Branch
+## Renomear Branch
 
 - **Renomear branch atual**:
   ```bash
@@ -63,11 +63,11 @@ Após concluir o trabalho em uma branch e integrá-la à principal, você deve d
 
 ---
 
-# 🌿 O que são Branches?
+# O que são Branches?
 
-## 📋 Estratégias de Branching
+## Estratégias de Branching
 
-### 1. GitFlow 🔄
+### 1. GitFlow
 Estratégia robusta para projetos com releases planejadas
 
 #### Branches Principais
@@ -94,7 +94,7 @@ git checkout main
 git checkout -b hotfix/2.1.1
 ```
 
-### 2. GitHub Flow 🌐
+### 2. GitHub Flow
 Estratégia simplificada para entrega contínua
 
 #### Características
@@ -113,7 +113,7 @@ git pull origin main
 git push -u origin feature/novo-botao
 ```
 
-### 3. Trunk-Based Development 🚀
+### 3. Trunk-Based Development
 Estratégia para times com CI/CD maduro
 
 #### Características
@@ -133,7 +133,7 @@ git checkout main
 git merge feat/pequena-mudanca
 ```
 
-## 🛠️ Técnicas Avançadas
+## Técnicas Avançadas
 
 ### 1. Feature Flags
 ```javascript
@@ -173,7 +173,7 @@ git merge release/2.0.0
 git tag -a v2.0.0 -m "Versão 2.0.0"
 ```
 
-## 📊 Gerenciamento de Branches
+## Gerenciamento de Branches
 
 ### 1. Nomenclatura
 ```plaintext
@@ -216,7 +216,7 @@ branches:
         strict: true
 ```
 
-## 🔄 Workflows Comuns
+## Workflows Comuns
 
 ### 1. Feature Branch
 ```powershell
@@ -267,7 +267,7 @@ git checkout develop
 git merge hotfix/2.0.1
 ```
 
-## 🎯 Melhores Práticas
+## Melhores Práticas
 
 ### 1. Regras de Branch
 - Mantenha branches pequenas e focadas
@@ -287,7 +287,7 @@ git merge hotfix/2.0.1
 - Limpe branches obsoletas
 - Use shallow clones quando apropriado
 
-## 📈 Monitoramento
+## Monitoramento
 
 ### 1. Métricas
 - Tempo de vida da branch
@@ -309,6 +309,6 @@ git log --graph --oneline --all
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

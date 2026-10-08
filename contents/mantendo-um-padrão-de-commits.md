@@ -1,38 +1,38 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🧑‍💻 Mantendo um Padrão de Commits
+# Mantendo um Padrão de Commits
 
-> **📋 Pré-requisitos:** Este guia assume conhecimento de **[📜 O que são Commits](o-que-sao-commits.md)** e **[🎯 Commits Semânticos](commits-semanticos.md)**.
+> **Pré-requisitos:** Este guia assume conhecimento de **[O que são Commits](o-que-sao-commits.md)** e **[Commits Semânticos](commits-semanticos.md)**.
 
-## 🎯 Por que Padronizar em Equipe?
+## Por que Padronizar em Equipe?
 
 Manter um padrão consistente de commits é fundamental para o sucesso de projetos colaborativos. Vai além de simplesmente escrever mensagens bonitas - é sobre criar um sistema que facilite a comunicação, automação e manutenção do código.
 
-### 🌟 Benefícios da Padronização:
+### Benefícios da Padronização:
 
-#### 📈 **Para o Projeto**
+#### **Para o Projeto**
 - **Histórico Legível**: Facilita revisão de código e debugging
 - **Automação**: Permite geração automática de changelogs e releases
 - **Rastreabilidade**: Conecta mudanças com issues e requisitos
 - **Qualidade**: Reduz bugs através de commits mais focados
 
-#### 👥 **Para a Equipe**
+#### **Para a Equipe**
 - **Comunicação Clara**: Todos entendem o que foi alterado
 - **Onboarding Rápido**: Novos membros se adaptam mais facilmente
 - **Revisão Eficiente**: Code reviews mais rápidos e precisos
 - **Colaboração**: Reduz conflitos e mal-entendidos
 
-#### 🏢 **Para a Organização**
+#### **Para a Organização**
 - **Compliance**: Atende requisitos de auditoria e governança
 - **Métricas**: Permite análise de produtividade e qualidade
 - **Documentação**: Histórico serve como documentação técnica
 - **Manutenção**: Facilita correções e atualizações futuras
 
-## 🏗️ Implementando Padrões em Equipe
+## Implementando Padrões em Equipe
 
-### 1. 📋 Definindo o Padrão
+### 1. Definindo o Padrão
 
-#### 🎯 **Escolha da Convenção**
+#### **Escolha da Convenção**
 ```markdown
 ## Opções Populares:
 
@@ -52,7 +52,7 @@ Manter um padrão consistente de commits é fundamental para o sucesso de projet
 - Menor suporte de ferramentas
 ```
 
-#### 📝 **Documentação do Padrão**
+#### **Documentação do Padrão**
 ```markdown
 # COMMIT_GUIDELINES.md
 
@@ -82,9 +82,9 @@ tipo(escopo): descrição
 ❌ feat: implementa várias coisas
 ```
 
-### 2. 🛠️ Ferramentas de Enforcement
+### 2. Ferramentas de Enforcement
 
-#### 🔒 **Git Hooks com Husky**
+#### **Git Hooks com Husky**
 ```json
 // package.json
 {
@@ -101,7 +101,7 @@ tipo(escopo): descrição
 }
 ```
 
-#### ⚙️ **Configuração do Commitlint**
+#### **Configuração do Commitlint**
 ```json
 // .commitlintrc.json
 {
@@ -122,7 +122,7 @@ tipo(escopo): descrição
 }
 ```
 
-#### 🎯 **Template de Commit**
+#### **Template de Commit**
 ```bash
 # .gitmessage
 # tipo(escopo): descrição curta (máx 72 chars)
@@ -140,9 +140,9 @@ tipo(escopo): descrição
 # git config --global commit.template ~/.gitmessage
 ```
 
-### 3. 🎓 Treinamento da Equipe
+### 3. Treinamento da Equipe
 
-#### 📚 **Workshop de Onboarding**
+#### **Workshop de Onboarding**
 ```markdown
 ## Agenda do Workshop (2h)
 
@@ -166,7 +166,7 @@ tipo(escopo): descrição
 - Feedback sobre o processo
 ```
 
-#### 🎮 **Exercícios Práticos**
+#### **Exercícios Práticos**
 ```powershell
 # Exercício 1: Corrigir commits ruins
 git log --oneline -10
@@ -181,11 +181,11 @@ npx cz
 # Praticar o fluxo interativo
 ```
 
-## 🔍 Revisão e Qualidade
+## Revisão e Qualidade
 
-### 📝 **Checklist para Code Review**
+### **Checklist para Code Review**
 
-#### 👤 **Para o Autor**
+#### **Para o Autor**
 ```markdown
 ## Antes de Criar o PR
 
@@ -202,7 +202,7 @@ npx cz
 - [ ] Sem código comentado ou debug
 ```
 
-#### 👥 **Para o Reviewer**
+#### **Para o Reviewer**
 ```markdown
 ## Durante a Revisão
 
@@ -220,7 +220,7 @@ npx cz
 ❌ "Muita coisa em um commit"
 ```
 
-### 🔄 **Processo de Correção**
+### **Processo de Correção**
 ```powershell
 # Cenário: Commits precisam ser ajustados antes do merge
 
@@ -235,9 +235,9 @@ git rebase -i HEAD~3
 git push --force-with-lease origin feature-branch
 ```
 
-## 📊 Monitoramento e Métricas
+## Monitoramento e Métricas
 
-### 📈 **Métricas de Qualidade**
+### **Métricas de Qualidade**
 ```powershell
 # Análise de conformidade com padrões
 git log --oneline --since="1 month ago" | grep -E "^(feat|fix|docs|style|refactor|test|chore)" | wc -l
@@ -252,7 +252,7 @@ git shortlog -sn --since="1 month ago"
 git log --oneline --since="1 month ago" --pretty=format:"%s" | awk '{print length}' | awk '{sum+=$1; n++} END {print sum/n}'
 ```
 
-### 🎯 **Dashboard de Commits**
+### **Dashboard de Commits**
 ```json
 // Exemplo de métricas para dashboard
 {
@@ -275,9 +275,9 @@ git log --oneline --since="1 month ago" --pretty=format:"%s" | awk '{print lengt
 }
 ```
 
-## 🚀 Automação Avançada
+## Automação Avançada
 
-### 🔄 **CI/CD Integration**
+### **CI/CD Integration**
 ```yaml
 # .github/workflows/commit-validation.yml
 name: Commit Validation
@@ -303,7 +303,7 @@ jobs:
           git log --oneline --since="1 week ago" --pretty=format:"- %s" >> $GITHUB_STEP_SUMMARY
 ```
 
-### 📦 **Release Automation**
+### **Release Automation**
 ```json
 // .releaserc.json
 {
@@ -330,9 +330,9 @@ jobs:
 }
 ```
 
-## 🎯 Casos Especiais e Soluções
+## Casos Especiais e Soluções
 
-### 🔄 **Migração de Projetos Existentes**
+### **Migração de Projetos Existentes**
 ```markdown
 ## Estratégia de Migração Gradual
 
@@ -352,7 +352,7 @@ jobs:
 - [ ] Monitorar métricas
 ```
 
-### 🚨 **Tratamento de Emergências**
+### **Tratamento de Emergências**
 ```powershell
 # Hotfix urgente - processo simplificado
 git checkout main
@@ -366,7 +366,7 @@ git push origin hotfix/critical-security-fix
 # Merge direto após revisão expressa
 ```
 
-### 🔀 **Merge vs Rebase Strategy**
+### **Merge vs Rebase Strategy**
 ```markdown
 ## Política de Merge da Equipe
 
@@ -384,21 +384,21 @@ git push origin hotfix/critical-security-fix
 - **Tag** com versão semântica
 ```
 
-## 🔗 Recursos e Próximos Passos
+## Recursos e Próximos Passos
 
-### 📚 **Documentação Complementar**
-- **[📜 O que são Commits](o-que-sao-commits.md)** - Fundamentos básicos
-- **[🎯 Commits Semânticos](commits-semanticos.md)** - Especificação técnica detalhada
-- **[🎨 Commits com Emojis](emojis.md)** - Alternativas visuais
+### **Documentação Complementar**
+- **[O que são Commits](o-que-sao-commits.md)** - Fundamentos básicos
+- **[Commits Semânticos](commits-semanticos.md)** - Especificação técnica detalhada
+- **[Commits com Emojis](emojis.md)** - Alternativas visuais
 
-### 🛠️ **Ferramentas Recomendadas**
+### **Ferramentas Recomendadas**
 - **Commitizen**: Assistente interativo para commits
 - **Commitlint**: Validação de mensagens
 - **Husky**: Git hooks automatizados
 - **Semantic Release**: Automação de releases
 - **Conventional Changelog**: Geração de changelogs
 
-### 📈 **Próximos Níveis**
+### **Próximos Níveis**
 1. **Implementar métricas de qualidade**
 2. **Configurar automação de releases**
 3. **Integrar com ferramentas de project management**
@@ -407,6 +407,6 @@ git push origin hotfix/critical-security-fix
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

@@ -1,10 +1,10 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=header"/>
 
-# 🎨 Commits com Emojis
+# Commits com Emojis
 
-> **🔗 Contexto:** Este é um complemento visual aos **[🎯 Commits Semânticos](commits-semanticos.md)**. Para implementação em equipe, veja **[🧑‍💻 Mantendo um Padrão](mantendo-um-padrão-de-commits.md)**.
+> **Contexto:** Este é um complemento visual aos **[Commits Semânticos](commits-semanticos.md)**. Para implementação em equipe, veja **[Mantendo um Padrão](mantendo-um-padrão-de-commits.md)**.
 
-## 📋 O que são Commits com Emojis?
+## O que são Commits com Emojis?
 
 Commits com emojis são uma **abordagem visual alternativa** para representar o tipo de mudança em uma mensagem de commit. Em vez de usar apenas prefixos textuais como `feat:` ou `fix:`, você pode usar emojis para tornar o histórico mais visual e expressivo.
 
@@ -26,7 +26,7 @@ docs: atualiza documentação da API
 📚 docs: atualiza documentação da API
 ```
 
-## 🤔 Quando Usar Emojis em Commits?
+## Quando Usar Emojis em Commits?
 
 ### ✅ **Cenários Apropriados**
 - **Projetos pessoais** ou de estudo
@@ -42,7 +42,7 @@ docs: atualiza documentação da API
 - **Integração com ferramentas** que não suportam emojis
 - **Equipes com desenvolvedores** que não estão familiarizados
 
-## ⚖️ Vantagens e Desvantagens
+## Vantagens e Desvantagens
 
 ### ✅ **Vantagens**
 - **Visual**: Facilita identificação rápida do tipo de commit
@@ -57,13 +57,13 @@ docs: atualiza documentação da API
 - **Ambiguidade**: Interpretação pode variar entre pessoas
 - **Ferramentas**: Nem todas as ferramentas de CI/CD reconhecem
 
-## 🏢 Contexto Empresarial
+## Contexto Empresarial
 
 ### ⚠️ **Importante: Não é Padrão Oficial**
 
 É fundamental entender que **commits com emojis NÃO são um padrão oficialmente adotado** na maioria das empresas. Diferentemente dos [Commits Semânticos](commits-semanticos.md), que seguem uma especificação formal, os emojis são uma **convenção informal** da comunidade.
 
-### 🏛️ **Padrões Empresariais Comuns**
+### **Padrões Empresariais Comuns**
 ```plaintext
 # Padrões Formais Aceitos
 ✅ Conventional Commits (feat:, fix:, docs:)
@@ -75,14 +75,14 @@ docs: atualiza documentação da API
 ⚠️ Prefixos customizados da empresa
 ```
 
-### 💼 **Recomendações para Ambiente Profissional**
+### **Recomendações para Ambiente Profissional**
 1. **Consulte a equipe** antes de adotar
 2. **Verifique políticas** da empresa sobre commits
 3. **Considere ferramentas** de integração existentes
 4. **Priorize consistência** sobre criatividade
 5. **Documente o padrão** escolhido pela equipe
 
-## 🛠️ Como Implementar
+## Como Implementar
 
 ### 1. **Definir Padrão da Equipe**
 ```markdown
@@ -117,7 +117,7 @@ git fix "corrige validação de email"
 # Exemplo: ✨ adiciona sistema de notificações
 ```
 
-## 📊 Alternativas Híbridas
+## Alternativas Híbridas
 
 ### **Emoji + Prefixo Semântico**
 ```plaintext
@@ -138,7 +138,7 @@ feat: implementa API de push notifications
 test: adiciona testes para notification service
 ```
 
-## 📚 Tabela de Referência de Emojis
+## Tabela de Referência de Emojis
 
 A tabela abaixo serve como **referência rápida** para quem decide usar emojis em commits. Lembre-se: esta é uma **convenção da comunidade**, não um padrão oficial.
 
@@ -334,22 +334,22 @@ A tabela abaixo serve como **referência rápida** para quem decide usar emojis 
   </tbody>
 </table>
 
-## 🎯 Conclusão e Melhores Práticas
+## Conclusão e Melhores Práticas
 
-### 📝 **Resumo**
+### **Resumo**
 - **Emojis em commits** são uma abordagem **visual e expressiva**
 - **Não são padrão oficial** - use com consciência do contexto
 - **Ideais para projetos pessoais** e comunidades descontraídas
 - **Requerem consenso da equipe** em ambientes profissionais
 
-### 🏆 **Melhores Práticas**
+### **Melhores Práticas**
 1. **Defina um padrão claro** com sua equipe
 2. **Documente as convenções** escolhidas
 3. **Seja consistente** na aplicação
 4. **Considere alternativas híbridas** (emoji + prefixo)
 5. **Priorize legibilidade** sobre criatividade
 
-### 🔄 **Migração Gradual**
+### **Migração Gradual**
 Se sua equipe quer experimentar emojis:
 ```plaintext
 # Fase 1: Apenas em PRs
@@ -364,18 +364,18 @@ Se sua equipe quer experimentar emojis:
 🐛 corrige bug de validação
 ```
 
-### 💡 **Dica Final**
+### **Dica Final**
 Lembre-se: o mais importante é a **consistência** e **clareza** das mensagens de commit. Seja usando emojis, prefixos semânticos ou uma abordagem híbrida, o objetivo é facilitar a compreensão do histórico do projeto para toda a equipe.
 
 ---
 
-**📖 Recursos Relacionados:**
+**Recursos Relacionados:**
 - [Commits Semânticos](commits-semanticos.md) - Padrão formal recomendado
 - [Boas Práticas](boas-praticas.md) - Diretrizes gerais para commits
 - [Mantendo um Padrão de Commits](mantendo-um-padrão-de-commits.md) - Consistência na equipe
 
 ---
 
-[🔙 Voltar ao índice principal](../README.md)
+[Voltar ao índice principal](../README.md)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=F05032&height=120&section=footer"/>

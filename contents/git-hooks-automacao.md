@@ -1,10 +1,10 @@
-# 🧩 Git Hooks e Automação
+# Git Hooks e Automação
 
-## 🎯 O que são Git Hooks?
+## O que são Git Hooks?
 
 Git Hooks são scripts que o Git executa automaticamente antes ou depois de eventos como commit, push e merge. Eles permitem personalizar o comportamento interno do Git e acionar ações customizadas em pontos específicos do seu workflow.
 
-## 📂 Localização dos Hooks
+## Localização dos Hooks
 
 Os hooks ficam no diretório `.git/hooks/` do seu repositório. Cada hook é um arquivo executável sem extensão (Linux/Mac) ou com extensão .bat/.ps1 (Windows).
 
@@ -13,7 +13,7 @@ Os hooks ficam no diretório `.git/hooks/` do seu repositório. Cada hook é um 
 ls .git/hooks/
 ```
 
-## 🔄 Tipos de Hooks
+## Tipos de Hooks
 
 ### 1. Hooks de Commit
 
@@ -120,7 +120,7 @@ npm install
 npm run build
 ```
 
-## 🛠️ Implementação com Husky
+## Implementação com Husky
 
 ### 1. Instalação
 ```powershell
@@ -155,7 +155,7 @@ npx husky add .husky/pre-commit "npm test"
 npx husky add .husky/commit-msg "npx commitlint --edit $1"
 ```
 
-## 🔄 Workflows Comuns
+## Workflows Comuns
 
 ### 1. Validação de Código
 ```bash
@@ -196,7 +196,7 @@ npm run test:coverage
 npx --no -- commitlint --edit $1
 ```
 
-## 🔧 Ferramentas Úteis
+## Ferramentas Úteis
 
 ### 1. lint-staged
 ```json
